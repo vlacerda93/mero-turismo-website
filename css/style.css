@@ -435,3 +435,100 @@ a:hover {
     font-size: 2rem;
   }
 }
+
+/* Seção Alimentação e Bebidas */
+.sessao-alimentacao {
+  padding: 4rem 0;
+  background-color: var(--white);
+}
+
+.sessao-alimentacao h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.sessao-alimentacao > .container > p {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alimentacao-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-refeicao {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.card-refeicao:nth-child(even) {
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.card-refeicao:nth-child(even) .texto-refeicao {
+  order: 2;
+}
+
+.card-refeicao:nth-child(even) .imagem-refeicao {
+  order: 1;
+}
+
+.texto-refeicao h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.texto-refeicao p {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.imagem-refeicao img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.observacao-refeicoes {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .card-refeicao,
+  .card-refeicao:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .card-refeicao:nth-child(even) .texto-refeicao {
+    order: 1;
+  }
+
+  .card-refeicao:nth-child(even) .imagem-refeicao {
+    order: 2;
+  }
+
+  .sessao-alimentacao h2 {
+    font-size: 2rem;
+  }
+}
