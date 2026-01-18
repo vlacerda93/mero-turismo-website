@@ -58,3 +58,50 @@ document.querySelectorAll('section').forEach(section => {
 });
 
 console.log('Mero Turismo - Website Loaded Successfully!');
+
+// Gallery Lightbox Functionality
+const lightboxModal = document.getElementById('lightboxModal');
+const lightboxImage = document.getElementById('lightboxImage');
+const lightboxCaption = document.getElementById('lightboxCaption');
+const lightboxClose = document.querySelector('.lightbox-close');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+// Open lightbox on gallery item click
+galleryItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('img');
+    const alt = img.getAttribute('alt');
+    const src = img.getAttribute('src');
+    
+    lightboxImage.src = src;
+    lightboxCaption.textContent = alt;
+    lightboxModal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  });
+});
+
+// Close lightbox on close button click
+lightboxClose.addEventListener('click', closeLightbox);
+
+// Close lightbox on outside click
+lightboxModal.addEventListener('click', (e) => {
+  if (e.target === lightboxModal) {
+    closeLightbox();
+  }
+});
+
+// Close lightbox on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+    closeLightbox();
+  }
+});
+
+// Function to close lightbox
+function closeLightbox() {
+  lightboxModal.classList.remove('active');
+  document.body.style.overflow = 'auto'; // Re-enable scrolling
+}
+
+console.log('Gallery Lightbox - Ready!');
+
