@@ -114,7 +114,12 @@ a:hover {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  position: relative;
+  background-image: url("../assets/images/barco-mero-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   color: var(--white);
   padding: var(--spacing-3xl) var(--spacing-md);
   text-align: center;
