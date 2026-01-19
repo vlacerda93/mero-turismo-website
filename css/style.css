@@ -1,539 +1,175 @@
-/* Reset e Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-primary);
-  color: var(--text-color);
-  background-color: var(--white);
-  line-height: var(--line-height-normal);
-  font-size: var(--font-size-base);
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-primary);
-  font-weight: 600;
-  line-height: var(--line-height-tight);
-  margin-bottom: var(--spacing-md);
-}
-
-h2 {
-  font-size: var(--font-size-2xl);
-  color: var(--text-color);
-}
-
-h3 {
-  font-size: var(--font-size-xl);
-}
-
-p {
-  margin-bottom: var(--spacing-md);
-  line-height: var(--line-height-relaxed);
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color var(--transition-base);
-}
-
-a:hover {
-  color: var(--primary-dark);
-}
-
-/* Navbar */
-.navbar {
-  background-color: var(--white);
-  box-shadow: var(--shadow-md);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: all var(--transition-base);
-}
-
-.navbar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--spacing-lg) 0;
-}
-
-.logo h1 {
-  font-size: var(--font-size-xl);
-  color: var(--text-color);
-  margin: 0;
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
-  gap: var(--spacing-sm);
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: var(--text-color);
-  border-radius: var(--radius-full);
-  transition: all var(--transition-base);
-}
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: var(--spacing-2xl);
-}
-
-.nav-menu a {
-  color: var(--text-color);
-  font-weight: 500;
-  transition: color var(--transition-base);
-}
-
-.nav-menu a:hover {
-  color: var(--primary-color);
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  background-image: url("../assets/images/barco-mero-1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  color: var(--white);
-  padding: var(--spacing-3xl) var(--spacing-md);
-  text-align: center;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 0.8s ease-in-out;
-}
-
-.hero-content h2 {
-  font-size: var(--font-size-3xl);
-  color: var(--white);
-  margin-bottom: var(--spacing-lg);
-}
-
-.hero-content p {
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-2xl);
-  color: var(--white);
-}
-
-.cta-button {
-  display: inline-block;
-  background-color: var(--secondary-color);
-  color: var(--white);
-  padding: var(--spacing-lg) var(--spacing-2xl);
-  border-radius: var(--radius-lg);
-  font-weight: 600;
-  transition: all var(--transition-base);
-  border: 2px solid var(--secondary-color);
-}
-
-.cta-button:hover {
-  background-color: transparent;
-  color: var(--secondary-color);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-/* Sections */
-.passeios {
-  padding: var(--spacing-3xl) var(--spacing-md);
-  background-color: var(--light-gray);
-}
-
-/* Footer */
-.footer {
-  background-color: var(--dark-gray);
-  color: var(--white);
-  padding: var(--spacing-2xl) var(--spacing-md);
-  text-align: center;
-  margin-top: var(--spacing-3xl);
-}
-
-.footer p {
-  margin: var(--spacing-sm) 0;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Responsive Design - Mobile First */
-@media (max-width: 768px) {
-  .navbar-content {
-    padding: var(--spacing-md) 0;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--white);
-    flex-direction: column;
-    gap: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height var(--transition-base);
-    box-shadow: var(--shadow-md);
-  }
-
-  .nav-menu.active {
-    max-height: 300px;
-  }
-
-  .nav-menu li {
-    border-bottom: 1px solid var(--medium-gray);
-  }
-
-  .nav-menu a {
-    display: block;
-    padding: var(--spacing-lg);
-  }
-
-  .hero {
-    min-height: 400px;
-    padding: var(--spacing-2xl) var(--spacing-md);
-  }
-
-  .hero-content h2 {
-    font-size: var(--font-size-2xl);
-  }
-
-  .hero-content p {
-    font-size: var(--font-size-base);
-  }
-
-  .cta-button {
-    padding: var(--spacing-md) var(--spacing-xl);
-    font-size: var(--font-size-sm);
-  }
-}
-
-@media (max-width: 576px) {
-  .container {
-    padding: 0 var(--spacing-sm);
-  }
-
-  .logo h1 {
-    font-size: var(--font-size-lg);
-  }
-
-  .hero {
-    min-height: 300px;
-    padding: var(--spacing-xl) var(--spacing-sm);
-  }
-
-  .hero-content h2 {
-    font-size: var(--font-size-xl);
-  }
-
-  h2 {
-    font-size: var(--font-size-xl);
-  }
-
-  .nav-menu.active {
-    max-height: 250px;
-  }
-}
-
-/* Gallery Section */
-.galeria {
-  padding: var(--spacing-3xl) var(--spacing-md);
-  background-color: var(--white);
-}
-
-.galeria h2 {
-  text-align: center;
-  margin-bottom: var(--spacing-md);
-}
-
-.galeria-subtitle {
-  text-align: center;
-  color: var(--primary-color);
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-2xl);
-}
-
-/* Gallery Grid - Masonry Layout */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-2xl);
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  cursor: pointer;
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-base);
-  margin: 0;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  transition: transform var(--transition-base);
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-.gallery-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 188, 212, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity var(--transition-base);
-}
-
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
-}
-
-.gallery-text {
-  color: var(--white);
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  text-align: center;
-  margin: 0;
-}
-
-/* Lightbox Modal */
-.lightbox-modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
-  animation: fadeIn var(--transition-base);
-}
-
-.lightbox-modal.active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#lightboxImage {
-  max-width: 90%;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: var(--radius-lg);
-}
-
-#lightboxCaption {
-  color: var(--white);
-  font-size: var(--font-size-lg);
-  margin-top: var(--spacing-lg);
-  text-align: center;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: var(--spacing-lg);
-  right: var(--spacing-lg);
-  color: var(--white);
-  font-size: 3rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color var(--transition-base);
-  z-index: 2001;
-}
-
-.lightbox-close:hover {
-  color: var(--primary-color);
-}
-
-/* Gallery Responsive */
-@media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: var(--spacing-md);
-  }
-
-  .gallery-item img {
-    height: 200px;
-  }
-
-  #lightboxImage {
-    max-width: 95%;
-    max-height: 70vh;
-  }
-}
-
-@media (max-width: 576px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .gallery-item img {
-    height: 250px;
-  }
-
-  .lightbox-close {
-    font-size: 2rem;
-  }
-}
-
-/* Seção Alimentação e Bebidas */
-.sessao-alimentacao {
-  padding: 4rem 0;
-  background-color: var(--white);
-}
-
-.sessao-alimentacao h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  color: var(--text-color);
-}
-
-.sessao-alimentacao > .container > p {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.alimentacao-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.card-refeicao {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.card-refeicao:nth-child(even) {
-  grid-template-columns: 1fr 1.5fr;
-}
-
-.card-refeicao:nth-child(even) .texto-refeicao {
-  order: 2;
-}
-
-.card-refeicao:nth-child(even) .imagem-refeicao {
-  order: 1;
-}
-
-.texto-refeicao h3 {
-  margin-bottom: 0.75rem;
-  font-size: 1.5rem;
-  color: var(--primary-color);
-}
-
-.texto-refeicao p {
-  line-height: 1.6;
-  color: var(--text-color);
-}
-
-.imagem-refeicao img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.observacao-refeicoes {
-  text-align: center;
-  font-size: 0.95rem;
-  color: var(--text-color);
-  background-color: var(--white);
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 2rem;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .card-refeicao,
-  .card-refeicao:nth-child(even) {
-    grid-template-columns: 1fr;
-  }
-
-  .card-refeicao:nth-child(even) .texto-refeicao {
-    order: 1;
-  }
-
-  .card-refeicao:nth-child(even) .imagem-refeicao {
-    order: 2;
-  }
-
-  .sessao-alimentacao h2 {
-    font-size: 2rem;
-  }
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barco Mero - Passeios marítimos em Angra dos Reis, RJ. Descubra as melhores trilhas de água, praias paradisíacas e momentos inesquecíveis.">
+    <meta name="theme-color" content="#00bcd4">
+    <title>Barco Mero | Passeios Marítimos em Angra dos Reis</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <h1>🛶 Barco Mero</h1>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#passeios">Passeios</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo ao Barco Mero</h2>
+            <p>Descubra os passeios marítimos mais incríveis de Angra dos Reis</p>
+            <a href="#passeios" class="cta-button">Explore Nossos Passeios</a>
+        </div>    
+    </section>
+
+    <!-- Passeios Section (Placeholder) -->
+    <section id="passeios" class="passeios">
+        <div class="container">
+            <h2>Nossos Passeios</h2>
+            <p>Conheça nossas opções de passeios.</p>
+        </div>
+    </section>
+
+        <!-- Galeria Section -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2>Galeria de Momentos</h2>
+            <p class="galeria-subtitle">Descubra a beleza dos nossos passeios</p>
+            
+            <!-- Galeria Grid com Lightbox -->
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Imagens serão adicionadas aqui -->
+                <figure class="gallery-item" data-lightbox="gallery">
+                    <img src="assets/images/agua-cristalina-1.jpg" alt="Água cristalina turquesa" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Lagoa Azul</p>
+                    </div>
+                </figure>
+
+                <figure class="gallery-item" data-lightbox="gallery">
+                    <img src="assets/images/barco-mero-1.jpg" alt="Barco Mero navegando" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Barco Mero</p>
+                    </div>
+                </figure>
+
+                <figure class="gallery-item" data-lightbox="gallery">
+                    <img src="assets/images/snorkel-peixes.jpg" alt="Snorkel com peixes" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Snorkel</p>
+                    </div>
+                </figure>
+
+                <figure class="gallery-item" data-lightbox="gallery">
+                    <img src="assets/images/por-do-sol.jpg" alt="Pôr do sol no mar" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Pôr do Sol</p>
+                    </div>
+                </figure>
+
+                <figure class="gallery-item" data-lightbox="gallery">
+                    <img src="assets/images/praia-paradisiaca.jpg" alt="Praia paradisíaca" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Praia Paradisíaca</p>
+                    </div>
+                </figure>
+
+                <figure class="gallery-item" data-lightbox="gallery">
+                    <img src="assets/images/pessoas-grupo.jpg" alt="Grupo de pessoas" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Momentos em Grupo</p>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Alimentação e Bebidas -->
+    <section id="alimentacao-bordo" class="sessao-alimentacao">
+      <div class="container">
+        <h2>Comidas e Bebidas a Bordo</h2>
+
+        <p>
+          Para deixar a experiência ainda mais completa, disponibilizamos um cardápio
+          exclusivo de bebidas e refeições já incluídas no pacote, pensado para até
+          10 pessoas, sem preocupação extra durante o passeio.
+        </p>
+
+        <div class="alimentacao-grid">
+          <!-- Bloco Café da Manhã -->
+          <article class="card-refeicao">
+            <div class="texto-refeicao">
+              <h3>Café da Manhã a Bordo</h3>
+              <p>
+                Oferecemos um cardápio completo de café da manhã para até 10 pessoas,
+                com opções doces e salgadas, frutas, pães, frios e bebidas quentes e
+                geladas, para você começar o dia já curtindo o visual de Angra.
+              </p>
+            </div>
+            <div class="imagem-refeicao">
+              <img src="assets/images/cafe-manha-barco-mero.jpg" alt="Café da manhã servido a bordo no Barco Mero">
+            </div>
+          </article>
+
+          <!-- Bloco Almoço -->
+          <article class="card-refeicao">
+            <div class="texto-refeicao">
+              <h3>Almoço com Vista para o Mar</h3>
+              <p>
+                Também disponibilizamos um almoço completo para até 10 pessoas, com
+                pratos frescos e saborosos, pensado para que a sua única preocupação
+                seja aproveitar o passeio, as paradas para banho e as paisagens de Angra.
+              </p>
+            </div>
+            <div class="imagem-refeicao">
+              <img src="assets/images/almoco-barco-mero.jpg" alt="Almoço servido a bordo com vista para o mar">
+            </div>
+          </article>
+        </div>
+
+        <p class="observacao-refeicoes">
+          Caso tenha alguma restrição alimentar ou preferência específfica, entre em contato
+          para personalizar o cardápio para o seu grupo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Modal Lightbox -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImage" src="" alt="">
+        <p id="lightboxCaption"></p>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Barco Mero. Todos os direitos reservados.</p>
+            <p>-em desenvolvimento-</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
