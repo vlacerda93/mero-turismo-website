@@ -15,19 +15,26 @@
         <div class="container">
             <div class="navbar-content">
                 <div class="logo">
-                    <h1>🛶 Barco Mero</h1>
+                    <h1 data-i18n="logo_text">🛶 Barco Mero</h1>
                 </div>
+
+                <!-- Botões de idioma -->
+                <div class="language-switcher">
+                    <button type="button" data-lang="pt">PT</button>
+                    <button type="button" data-lang="en">EN</button>
+                </div>
+
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#passeios">Passeios</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#home" data-i18n="nav_home">Início</a></li>
+                    <li><a href="#passeios" data-i18n="nav_tours">Passeios</a></li>
+                    <li><a href="#galeria" data-i18n="nav_gallery">Galeria</a></li>
+                    <li><a href="#sobre" data-i18n="nav_about">Sobre</a></li>
+                    <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
                 </ul>
             </div>
         </div>
@@ -36,238 +43,236 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h2>Bem-vindo ao Barco Mero</h2>
-            <p>Descubra os passeios marítimos mais incríveis de Angra dos Reis</p>
-            <a href="#passeios" class="cta-button">Explore Nossos Passeios</a>
+            <h2 data-i18n="hero_title">Bem-vindo ao Barco Mero</h2>
+            <p data-i18n="hero_subtitle">Descubra os passeios marítimos mais incríveis de Angra dos Reis</p>
+            <a href="#passeios" class="cta-button" data-i18n="hero_cta">Explore Nossos Passeios</a>
         </div>    
     </section>
 
-    <!-- Passeios Section (Placeholder) -->
+    <!-- Passeios Section -->
     <section id="passeios" class="passeios">
         <div class="container">
-            <section id="passeios" class="passeios">
-  <div class="container">
-    <h2>Nossos Passeios</h2>
-    <p>Escolha o roteiro que melhor combina com o seu estilo de viagem e aproveite o melhor de Angra dos Reis.</p>
+            <h2 data-i18n="tours_title">Nossos Passeios</h2>
+            <p data-i18n="tours_subtitle">
+                Escolha o roteiro que melhor combina com o seu estilo de viagem e aproveite o melhor de Angra dos Reis.
+            </p>
 
-    <div class="passeios-grid">
-      <!-- Card 1 - Lagoas & História -->
-      <article class="passeio-card">
-        <h3 class="passeio-title">Roteiro Lagoas &amp; História</h3>
+            <div class="passeios-grid">
+                <!-- Card 1 -->
+                <article class="passeio-card">
+                    <h3 class="passeio-title" data-i18n="tour1_title">Roteiro Lagoas &amp; História</h3>
 
-        <div class="passeio-meta">
-          <span class="badge-duration">Duração: 6h</span>
-          <span class="badge-schedule">Saída 09h · Retorno 15h</span>
-        </div>
+                    <div class="passeio-meta">
+                        <span class="badge-duration" data-i18n="tour1_duration">Duração: 6h</span>
+                        <span class="badge-schedule" data-i18n="tour1_schedule">Saída 09h · Retorno 15h</span>
+                    </div>
 
-        <p class="passeio-description">
-          Roteiro ideal para quem visita Angra pela primeira vez e quer combinar paisagens marcantes,
-          águas cristalinas e um toque de história local.
-        </p>
+                    <p class="passeio-description" data-i18n="tour1_description">
+                        Roteiro ideal para quem visita Angra pela primeira vez e quer combinar paisagens marcantes,
+                        águas cristalinas e um toque de história local.
+                    </p>
 
-        <div class="passeio-stops">
-          <h4>Paradas previstas</h4>
-          <ul>
-            <li>Lagoa Azul do Mero – parada para banho e snorkel em águas claras.</li>
-            <li>Enseada da Freguesia – visita à igrejinha histórica à beira-mar.</li>
-            <li>Praia dos Pescadores – tempo livre para fotos e descanso na areia.</li>
-            <li>Vila do Farol – parada opcional para almoço em restaurante à beira-mar.</li>
-          </ul>
-        </div>
+                    <div class="passeio-stops">
+                        <h4 data-i18n="tour1_stops_title">Paradas previstas</h4>
+                        <ul>
+                            <li data-i18n="tour1_stop1">Lagoa Azul do Mero – parada para banho e snorkel em águas claras.</li>
+                            <li data-i18n="tour1_stop2">Enseada da Freguesia – visita à igrejinha histórica à beira-mar.</li>
+                            <li data-i18n="tour1_stop3">Praia dos Pescadores – tempo livre para fotos e descanso na areia.</li>
+                            <li data-i18n="tour1_stop4">Vila do Farol – parada opcional para almoço em restaurante à beira-mar.</li>
+                        </ul>
+                    </div>
 
-        <div class="passeio-incluso">
-          <h4>Incluso no passeio</h4>
-          <ul>
-            <li>Café da manhã leve a bordo.</li>
-            <li>Água mineral e refrigerantes não alcoólicos.</li>
-            <li>Equipamentos básicos de snorkel para uso compartilhado.</li>
-            <li>Coletes salva-vidas para todos os passageiros.</li>
-          </ul>
-        </div>
+                    <div class="passeio-incluso">
+                        <h4 data-i18n="tour1_included_title">Incluso no passeio</h4>
+                        <ul>
+                            <li data-i18n="tour1_included1">Café da manhã leve a bordo.</li>
+                            <li data-i18n="tour1_included2">Água mineral e refrigerantes não alcoólicos.</li>
+                            <li data-i18n="tour1_included3">Equipamentos básicos de snorkel para uso compartilhado.</li>
+                            <li data-i18n="tour1_included4">Coletes salva-vidas para todos os passageiros.</li>
+                        </ul>
+                    </div>
 
-        <div class="passeio-footer">
-          <p class="passeio-preco">Valores a partir de R$ 100,00 · Sob consulta</p>
-          <a
-            class="btn-whatsapp"
-            href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Roteiro%20Lagoas%20%26%20Hist%C3%B3ria%20do%20Barco%20Mero."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Falar no WhatsApp
-          </a>
-        </div>
-      </article>
+                    <div class="passeio-footer">
+                        <p class="passeio-preco" data-i18n="tour1_price">Valores a partir de R$ 100,00 · Sob consulta</p>
+                        <a
+                            class="btn-whatsapp"
+                            href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Roteiro%20Lagoas%20%26%20Hist%C3%B3ria%20do%20Barco%20Mero."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="whatsapp_cta"
+                        >
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                </article>
 
-      <!-- Card 2 - Ilhas Paradisíacas -->
-      <article class="passeio-card">
-        <h3 class="passeio-title">Roteiro Ilhas Paradisíacas</h3>
+                <!-- Card 2 -->
+                <article class="passeio-card">
+                    <h3 class="passeio-title" data-i18n="tour2_title">Roteiro Ilhas Paradisíacas</h3>
 
-        <div class="passeio-meta">
-          <span class="badge-duration">Duração: 7h</span>
-          <span class="badge-schedule">Saída 10h · Retorno 17h</span>
-        </div>
+                    <div class="passeio-meta">
+                        <span class="badge-duration" data-i18n="tour2_duration">Duração: 7h</span>
+                        <span class="badge-schedule" data-i18n="tour2_schedule">Saída 10h · Retorno 17h</span>
+                    </div>
 
-        <p class="passeio-description">
-          Para quem busca cenários de cartão-postal, água em tons de azul e verde,
-          e paradas perfeitas para fotos e momentos inesquecíveis.
-        </p>
+                    <p class="passeio-description" data-i18n="tour2_description">
+                        Para quem busca cenários de cartão-postal, água em tons de azul e verde,
+                        e paradas perfeitas para fotos e momentos inesquecíveis.
+                    </p>
 
-        <div class="passeio-stops">
-          <h4>Paradas previstas</h4>
-          <ul>
-            <li>Ilhas Gêmeas do Mero – parada para banho em aquário natural.</li>
-            <li>Praia do Dentista do Sul – clima de ilha badalada e barcos ancorados.</li>
-            <li>Praia da Sereia Azul – tempo livre para fotos e mergulho.</li>
-            <li>Enseada Esmeralda – parada final para relaxar antes do retorno.</li>
-          </ul>
-        </div>
+                    <div class="passeio-stops">
+                        <h4 data-i18n="tour2_stops_title">Paradas previstas</h4>
+                        <ul>
+                            <li data-i18n="tour2_stop1">Ilhas Gêmeas do Mero – parada para banho em aquário natural.</li>
+                            <li data-i18n="tour2_stop2">Praia do Dentista do Sul – clima de ilha badalada e barcos ancorados.</li>
+                            <li data-i18n="tour2_stop3">Praia da Sereia Azul – tempo livre para fotos e mergulho.</li>
+                            <li data-i18n="tour2_stop4">Enseada Esmeralda – parada final para relaxar antes do retorno.</li>
+                        </ul>
+                    </div>
 
-        <div class="passeio-incluso">
-          <h4>Incluso no passeio</h4>
-          <ul>
-            <li>Welcome drink não alcoólico.</li>
-            <li>Frutas frescas e petiscos simples a bordo.</li>
-            <li>Caixa térmica com gelo para bebidas do grupo.</li>
-            <li>Equipamentos de snorkel para contemplação dos peixes.</li>
-          </ul>
-        </div>
+                    <div class="passeio-incluso">
+                        <h4 data-i18n="tour2_included_title">Incluso no passeio</h4>
+                        <ul>
+                            <li data-i18n="tour2_included1">Welcome drink não alcoólico.</li>
+                            <li data-i18n="tour2_included2">Frutas frescas e petiscos simples a bordo.</li>
+                            <li data-i18n="tour2_included3">Caixa térmica com gelo para bebidas do grupo.</li>
+                            <li data-i18n="tour2_included4">Equipamentos de snorkel para contemplação dos peixes.</li>
+                        </ul>
+                    </div>
 
-        <div class="passeio-footer">
-          <p class="passeio-preco">Valores a partir de R$ 000,00 · Sob consulta</p>
-          <a
-            class="btn-whatsapp"
-            href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Roteiro%20Ilhas%20Paradis%C3%ADacas%20do%20Barco%20Mero."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Falar no WhatsApp
-          </a>
-        </div>
-      </article>
+                    <div class="passeio-footer">
+                        <p class="passeio-preco" data-i18n="tour2_price">Valores a partir de R$ 000,00 · Sob consulta</p>
+                        <a
+                            class="btn-whatsapp"
+                            href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Roteiro%20Ilhas%20Paradis%C3%ADacas%20do%20Barco%20Mero."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="whatsapp_cta"
+                        >
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                </article>
 
-      <!-- Card 3 - Baía Tranquila -->
-      <article class="passeio-card">
-        <h3 class="passeio-title">Roteiro Baía Tranquila</h3>
+                <!-- Card 3 -->
+                <article class="passeio-card">
+                    <h3 class="passeio-title" data-i18n="tour3_title">Roteiro Baía Tranquila</h3>
 
-        <div class="passeio-meta">
-          <span class="badge-duration">Duração: 5h</span>
-          <span class="badge-schedule">Saída 08h30 · Retorno 13h30</span>
-        </div>
+                    <div class="passeio-meta">
+                        <span class="badge-duration" data-i18n="tour3_duration">Duração: 5h</span>
+                        <span class="badge-schedule" data-i18n="tour3_schedule">Saída 08h30 · Retorno 13h30</span>
+                    </div>
 
-        <p class="passeio-description">
-          Indicado para famílias, grupos com crianças e quem prefere um dia mais calmo,
-          com paradas em enseadas protegidas e águas rasas.
-        </p>
+                    <p class="passeio-description" data-i18n="tour3_description">
+                        Indicado para famílias, grupos com crianças e quem prefere um dia mais calmo,
+                        com paradas em enseadas protegidas e águas rasas.
+                    </p>
 
-        <div class="passeio-stops">
-          <h4>Paradas previstas</h4>
-          <ul>
-            <li>Praia de Cataguases do Mero – primeira parada para banho em água rasa.</li>
-            <li>Enseada do Sossego – tempo para descanso a bordo e fotos.</li>
-            <li>Praia da Família – parada para banho mais longa e brincadeiras.</li>
-            <li>Ponto de Vista Panorâmico – navegação lenta para fotos do visual da baía.</li>
-          </ul>
-        </div>
+                    <div class="passeio-stops">
+                        <h4 data-i18n="tour3_stops_title">Paradas previstas</h4>
+                        <ul>
+                            <li data-i18n="tour3_stop1">Praia de Cataguases do Mero – primeira parada para banho em água rasa.</li>
+                            <li data-i18n="tour3_stop2">Enseada do Sossego – tempo para descanso a bordo e fotos.</li>
+                            <li data-i18n="tour3_stop3">Praia da Família – parada para banho mais longa e brincadeiras.</li>
+                            <li data-i18n="tour3_stop4">Ponto de Vista Panorâmico – navegação lenta para fotos do visual da baía.</li>
+                        </ul>
+                    </div>
 
-        <div class="passeio-incluso">
-          <h4>Incluso no passeio</h4>
-          <ul>
-            <li>Água mineral à vontade.</li>
-            <li>Kit de frutas selecionadas.</li>
-            <li>Coletes infantis e adultos.</li>
-            <li>Apoio da tripulação durante embarque e desembarque.</li>
-          </ul>
-        </div>
+                    <div class="passeio-incluso">
+                        <h4 data-i18n="tour3_included_title">Incluso no passeio</h4>
+                        <ul>
+                            <li data-i18n="tour3_included1">Água mineral à vontade.</li>
+                            <li data-i18n="tour3_included2">Kit de frutas selecionadas.</li>
+                            <li data-i18n="tour3_included3">Coletes infantis e adultos.</li>
+                            <li data-i18n="tour3_included4">Apoio da tripulação durante embarque e desembarque.</li>
+                        </ul>
+                    </div>
 
-        <div class="passeio-footer">
-          <p class="passeio-preco">Valores a partir de R$ 000,00 · Sob consulta</p>
-          <a
-            class="btn-whatsapp"
-            href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Roteiro%20Ba%C3%ADa%20Tranquila%20do%20Barco%20Mero."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Falar no WhatsApp
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+                    <div class="passeio-footer">
+                        <p class="passeio-preco" data-i18n="tour3_price">Valores a partir de R$ 000,00 · Sob consulta</p>
+                        <a
+                            class="btn-whatsapp"
+                            href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Roteiro%20Ba%C3%ADa%20Tranquila%20do%20Barco%20Mero."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="whatsapp_cta"
+                        >
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
-        <!-- Galeria Section -->
+    <!-- Galeria Section -->
     <section id="galeria" class="galeria">
         <div class="container">
-            <h2>Galeria de Momentos</h2>
-            <p class="galeria-subtitle">Descubra a beleza dos nossos passeios</p>
+            <h2 data-i18n="gallery_title">Galeria de Momentos</h2>
+            <p class="galeria-subtitle" data-i18n="gallery_subtitle">Descubra a beleza dos nossos passeios</p>
             
-            <!-- Galeria Grid com Lightbox -->
             <div class="gallery-grid" id="galleryGrid">
-                <!-- Imagens serão adicionadas aqui -->
                 <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="agua-cristalina-1.jpg" alt="Água cristalina turquesa" loading="lazy">
+                    <img src="agua-cristalina-1.jpg" alt="Água cristalina turquesa">
                     <div class="gallery-overlay">
-                        <p class="gallery-text">Lagoa Azul</p>
+                        <p class="gallery-text" data-i18n="gallery_item1">Lagoa Azul</p>
                     </div>
                 </figure>
 
                 <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="barco-mero-1.jpg" alt="Barco Mero navegando" loading="lazy">
+                    <img src="barco-mero-1.jpg" alt="Barco Mero navegando">
                     <div class="gallery-overlay">
-                        <p class="gallery-text">Barco Mero</p>
+                        <p class="gallery-text" data-i18n="gallery_item2">Barco Mero</p>
                     </div>
                 </figure>
 
                 <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="snorkel-peixes.jpg" alt="Snorkel com peixes" loading="lazy">
+                    <img src="snorkel-peixes.jpg" alt="Snorkel com peixes">
                     <div class="gallery-overlay">
-                        <p class="gallery-text">Snorkel</p>
+                        <p class="gallery-text" data-i18n="gallery_item3">Snorkel</p>
                     </div>
                 </figure>
 
                 <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="por-do-sol.jpg" alt="Pôr do sol no mar" loading="lazy">
+                    <img src="por-do-sol.jpg" alt="Pôr do sol no mar">
                     <div class="gallery-overlay">
-                        <p class="gallery-text">Pôr do Sol</p>
+                        <p class="gallery-text" data-i18n="gallery_item4">Pôr do Sol</p>
                     </div>
                 </figure>
 
                 <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="praia-paradisiaca.jpg" alt="Praia paradisíaca" loading="lazy">
+                    <img src="praia-paradisiaca.jpg" alt="Praia paradisíaca">
                     <div class="gallery-overlay">
-                        <p class="gallery-text">Praia Paradisíaca</p>
+                        <p class="gallery-text" data-i18n="gallery_item5">Praia Paradisíaca</p>
                     </div>
                 </figure>
 
                 <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="pessoas-grupo.jpg" alt="Grupo de pessoas" loading="lazy">
+                    <img src="pessoas-grupo.jpg" alt="Grupo de pessoas">
                     <div class="gallery-overlay">
-                        <p class="gallery-text">Momentos em Grupo</p>
+                        <p class="gallery-text" data-i18n="gallery_item6">Momentos em Grupo</p>
                     </div>
                 </figure>
             </div>
         </div>
     </section>
     
-    <!-- Seção Alimentação e Bebidas -->
+    <!-- Alimentação -->
     <section id="alimentacao-bordo" class="sessao-alimentacao">
       <div class="container">
-        <h2>Comidas e Bebidas a Bordo</h2>
+        <h2 data-i18n="food_title">Comidas e Bebidas a Bordo</h2>
 
-        <p>
+        <p data-i18n="food_intro">
           Para deixar a experiência ainda mais completa, disponibilizamos um cardápio
           exclusivo de bebidas e refeições já incluídas no pacote, pensado para até
           10 pessoas, sem preocupação extra durante o passeio.
         </p>
 
         <div class="alimentacao-grid">
-          <!-- Bloco Café da Manhã -->
           <article class="card-refeicao">
             <div class="texto-refeicao">
-              <h3>Café da Manhã a Bordo</h3>
-              <p>
+              <h3 data-i18n="food_breakfast_title">Café da Manhã a Bordo</h3>
+              <p data-i18n="food_breakfast_text">
                 Oferecemos um cardápio completo de café da manhã para até 10 pessoas,
                 com opções doces e salgadas, frutas, pães, frios e bebidas quentes e
                 geladas, para você começar o dia já curtindo o visual de Angra.
@@ -278,11 +283,10 @@
             </div>
           </article>
 
-          <!-- Bloco Almoço -->
           <article class="card-refeicao">
             <div class="texto-refeicao">
-              <h3>Almoço com Vista para o Mar</h3>
-              <p>
+              <h3 data-i18n="food_lunch_title">Almoço com Vista para o Mar</h3>
+              <p data-i18n="food_lunch_text">
                 Também disponibilizamos um almoço completo para até 10 pessoas, com
                 pratos frescos e saborosos, pensado para que a sua única preocupação
                 seja aproveitar o passeio, as paradas para banho e as paisagens de Angra.
@@ -294,112 +298,116 @@
           </article>
         </div>
 
-        <p class="observacao-refeicoes">
+        <p class="observacao-refeicoes" data-i18n="food_note">
           Caso tenha alguma restrição alimentar ou preferência específfica, entre em contato
           para personalizar o cardápio para o seu grupo.
         </p>
       </div>
     </section>
+
+    <!-- Sobre -->
     <section id="sobre" class="sobre">
-  <div class="container">
-    <div class="sobre-content">
-      <div class="sobre-texto">
-        <h2>Sobre o Barco Mero</h2>
-        <p>
-          O Barco Mero oferece passeios marítimos exclusivos em Angra dos Reis e região,
-          com roteiros planejados para grupos de até 10 pessoas, unindo conforto, segurança
-          e contato direto com as belezas naturais da baía.
-        </p>
-        <p>
-          Nossa equipe atua com foco em experiência personalizada, orientando o embarque,
-          apoiando em cada parada e garantindo que o dia no mar seja tranquilo e memorável
-          para todos os passageiros.
-        </p>
-      </div>
+      <div class="container">
+        <div class="sobre-content">
+          <div class="sobre-texto">
+            <h2 data-i18n="about_title">Sobre o Barco Mero</h2>
+            <p data-i18n="about_p1">
+              O Barco Mero oferece passeios marítimos exclusivos em Angra dos Reis e região,
+              com roteiros planejados para grupos de até 10 pessoas, unindo conforto, segurança
+              e contato direto com as belezas naturais da baía.
+            </p>
+            <p data-i18n="about_p2">
+              Nossa equipe atua com foco em experiência personalizada, orientando o embarque,
+              apoiando em cada parada e garantindo que o dia no mar seja tranquilo e memorável
+              para todos os passageiros.
+            </p>
+          </div>
 
-      <div class="sobre-destaques">
-        <article class="sobre-item">
-          <div class="sobre-icone" aria-hidden="true">🛟</div>
-          <h3>Segurança em primeiro lugar</h3>
-          <p>
-            Embarcação equipada com coletes para todos, equipamentos de apoio e
-            tripulação treinada para conduzir o passeio com responsabilidade.
-          </p>
-        </article>
+          <div class="sobre-destaques">
+            <article class="sobre-item">
+              <div class="sobre-icone" aria-hidden="true">🛟</div>
+              <h3 data-i18n="about_highlight1_title">Segurança em primeiro lugar</h3>
+              <p data-i18n="about_highlight1_text">
+                Embarcação equipada com coletes para todos, equipamentos de apoio e
+                tripulação treinada para conduzir o passeio com responsabilidade.
+              </p>
+            </article>
 
-        <article class="sobre-item">
-          <div class="sobre-icone" aria-hidden="true">⚓</div>
-          <h3>Tripulação experiente</h3>
-          <p>
-            Profissionais que conhecem bem as rotas, condições do mar e pontos mais
-            indicados para banho, fotos e paradas de descanso.
-          </p>
-        </article>
+            <article class="sobre-item">
+              <div class="sobre-icone" aria-hidden="true">⚓</div>
+              <h3 data-i18n="about_highlight2_title">Tripulação experiente</h3>
+              <p data-i18n="about_highlight2_text">
+                Profissionais que conhecem bem as rotas, condições do mar e pontos mais
+                indicados para banho, fotos e paradas de descanso.
+              </p>
+            </article>
 
-        <article class="sobre-item">
-          <div class="sobre-icone" aria-hidden="true">🌊</div>
-          <h3>Roteiros personalizados</h3>
-          <p>
-            Possibilidade de adaptar horários e paradas conforme a necessidade do grupo,
-            de acordo com a disponibilidade e condições do dia.
-          </p>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-    <!-- Contact Section (Placeholder) -->
-     <section id="contato" class="contato">
-  <div class="container">
-    <div class="contato-content">
-      <div class="contato-texto">
-        <h2>Entre em Contato</h2>
-        <p>
-          Fale com nossa equipe para tirar dúvidas, consultar disponibilidade de datas
-          e receber uma proposta personalizada para o seu grupo.
-        </p>
-      </div>
-
-      <div class="contato-blocos">
-        <div class="contato-info">
-          <h3>Canais de atendimento</h3>
-          <ul>
-            <li><strong>WhatsApp:</strong> (21) 00000-0000</li>
-            <li><strong>Telefone:</strong> (21) 0000-0000</li>
-            <li><strong>E-mail:</strong> contato@barcomero.com.br</li>
-          </ul>
-          <p class="contato-observacao">
-            Horário de atendimento: diariamente, das 08h às 18h
-            (horários sujeitos à alteração conforme a operação dos passeios).
-          </p>
-        </div>
-
-        <div class="contato-cta">
-          <h3>Reserve seu passeio</h3>
-          <p>
-            Clique no botão abaixo para iniciar uma conversa direta pelo WhatsApp
-            e informar a data desejada, número de pessoas e roteiro de interesse.
-          </p>
-          <a
-            class="btn-whatsapp btn-whatsapp-grande"
-            href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20reservar%20um%20passeio%20no%20Barco%20Mero."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Falar com o Barco Mero no WhatsApp
-          </a>
+            <article class="sobre-item">
+              <div class="sobre-icone" aria-hidden="true">🌊</div>
+              <h3 data-i18n="about_highlight3_title">Roteiros personalizados</h3>
+              <p data-i18n="about_highlight3_text">
+                Possibilidade de adaptar horários e paradas conforme a necessidade do grupo,
+                de acordo com a disponibilidade e condições do dia.
+              </p>
+            </article>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+      <div class="container">
+        <div class="contato-content">
+          <div class="contato-texto">
+            <h2 data-i18n="contact_title">Entre em Contato</h2>
+            <p data-i18n="contact_intro">
+              Fale com nossa equipe para tirar dúvidas, consultar disponibilidade de datas
+              e receber uma proposta personalizada para o seu grupo.
+            </p>
+          </div>
+
+          <div class="contato-blocos">
+            <div class="contato-info">
+              <h3 data-i18n="contact_channels_title">Canais de atendimento</h3>
+              <ul>
+                <li><strong>WhatsApp:</strong> <span data-i18n="contact_whatsapp">(21) 00000-0000</span></li>
+                <li><strong>Telefone:</strong> <span data-i18n="contact_phone">(21) 0000-0000</span></li>
+                <li><strong>E-mail:</strong> <span data-i18n="contact_email">contato@barcomero.com.br</span></li>
+              </ul>
+              <p class="contato-observacao" data-i18n="contact_note">
+                Horário de atendimento: diariamente, das 08h às 18h
+                (horários sujeitos à alteração conforme a operação dos passeios).
+              </p>
+            </div>
+
+            <div class="contato-cta">
+              <h3 data-i18n="contact_book_title">Reserve seu passeio</h3>
+              <p data-i18n="contact_book_text">
+                Clique no botão abaixo para iniciar uma conversa direta pelo WhatsApp
+                e informar a data desejada, número de pessoas e roteiro de interesse.
+              </p>
+              <a
+                class="btn-whatsapp btn-whatsapp-grande"
+                href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20reservar%20um%20passeio%20no%20Barco%20Mero."
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="whatsapp_cta_full"
+              >
+                Falar com o Barco Mero no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Modal Lightbox -->
     <div id="lightboxModal" class="lightbox-modal">
         <span class="lightbox-close">&times;</span>
         <img id="lightboxImage" src="" alt="">
         <p id="lightboxCaption"></p>
     </div>
-
 
     <!-- Footer -->
     <footer class="footer">
