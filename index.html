@@ -1,311 +1,261 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Barco Mero - Passeios marítimos em Angra dos Reis, RJ. Descubra as melhores trilhas de água, praias paradisíacas e momentos inesquecíveis.">
-    <meta name="theme-color" content="#00bcd4">
-    <title>Barco Mero | Passeios Marítimos em Angra dos Reis</title>
-    <link rel="stylesheet" href="variables.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agência de Turismo MERO - Passeio Panorâmico pela Costa em Angra dos Reis, RJ. Conforto, segurança e experiências inesquecíveis no mar.">
+  <meta name="theme-color" content="#00bcd4">
+  <title>Agência de Turismo MERO | Passeio Panorâmico em Angra dos Reis</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-content">
-                <div class="logo">
-                    <h1 data-i18n="logo_text">🛶 Barco Mero</h1>
-                </div>
-
-                <!-- Botões de idioma -->
-                <div class="language-switcher">
-                    <button type="button" data-lang="pt">PT</button>
-                    <button type="button" data-lang="en">EN</button>
-                </div>
-
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" data-i18n="nav_home">Início</a></li>
-                    <li><a href="#passeios" data-i18n="nav_tours">Passeios</a></li>
-                    <li><a href="#galeria" data-i18n="nav_gallery">Galeria</a></li>
-                    <li><a href="#sobre" data-i18n="nav_about">Sobre</a></li>
-                    <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2 data-i18n="hero_title">Bem-vindo ao Barco Mero</h2>
-            <p data-i18n="hero_subtitle">Descubra os passeios marítimos mais incríveis de Angra dos Reis</p>
-            <a href="#passeios" class="cta-button" data-i18n="hero_cta">Explore Nossos Passeios</a>
-        </div>    
-    </section>
-
-    <!-- Passeios Section -->
-    <section id="passeios" class="passeios">
-        <div class="container">
-            <h2 data-i18n="tours_title">Nossos Passeios</h2>
-            <p data-i18n="tours_subtitle">
-                Escolha o roteiro que melhor combina com o seu estilo de viagem e aproveite o melhor de Angra dos Reis.
-            </p>
-
-            <div class="passeios-grid">
-                <!-- Card 1 -->
-                <article class="passeio-card">
-                    <h3 class="passeio-title" data-i18n="tour1_title">Roteiro Lagoas &amp; História</h3>
-
-                    <div class="passeio-meta">
-                        <span class="badge-duration" data-i18n="tour1_duration">Duração: 6h</span>
-                        <span class="badge-schedule" data-i18n="tour1_schedule">Saída 09h · Retorno 15h</span>
-                    </div>
-
-                    <p class="passeio-description" data-i18n="tour1_description">
-                        Roteiro ideal para quem visita Angra pela primeira vez e quer combinar paisagens marcantes,
-                        águas cristalinas e um toque de história local.
-                    </p>
-
-                    <div class="passeio-stops">
-                        <h4 data-i18n="tour1_stops_title">Paradas previstas</h4>
-                        <ul>
-                            <li data-i18n="tour1_stop1">Lagoa Azul do Mero – parada para banho e snorkel em águas claras.</li>
-                            <li data-i18n="tour1_stop2">Enseada da Freguesia – visita à igrejinha histórica à beira-mar.</li>
-                            <li data-i18n="tour1_stop3">Praia dos Pescadores – tempo livre para fotos e descanso na areia.</li>
-                            <li data-i18n="tour1_stop4">Vila do Farol – parada opcional para almoço em restaurante à beira-mar.</li>
-                        </ul>
-                    </div>
-
-                    <div class="passeio-incluso">
-                        <h4 data-i18n="tour1_included_title">Incluso no passeio</h4>
-                        <ul>
-                            <li data-i18n="tour1_included1">Café da manhã leve a bordo.</li>
-                            <li data-i18n="tour1_included2">Água mineral e refrigerantes não alcoólicos.</li>
-                            <li data-i18n="tour1_included3">Equipamentos básicos de snorkel para uso compartilhado.</li>
-                            <li data-i18n="tour1_included4">Coletes salva-vidas para todos os passageiros.</li>
-                        </ul>
-                    </div>
-
-                    <div class="passeio-footer">
-                        <p class="passeio-preco" data-i18n="tour1_price">Valores a partir de R$ 100,00 · Sob consulta</p>
-                        <a
-                            class="btn-whatsapp"
-                            href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Roteiro%20Lagoas%20%26%20Hist%C3%B3ria%20do%20Barco%20Mero."
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="whatsapp_cta"
-                        >
-                            Falar no WhatsApp
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Card 2 -->
-                <article class="passeio-card">
-                    <h3 class="passeio-title" data-i18n="tour2_title">Roteiro Ilhas Paradisíacas</h3>
-
-                    <div class="passeio-meta">
-                        <span class="badge-duration" data-i18n="tour2_duration">Duração: 7h</span>
-                        <span class="badge-schedule" data-i18n="tour2_schedule">Saída 10h · Retorno 17h</span>
-                    </div>
-
-                    <p class="passeio-description" data-i18n="tour2_description">
-                        Para quem busca cenários de cartão-postal, água em tons de azul e verde,
-                        e paradas perfeitas para fotos e momentos inesquecíveis.
-                    </p>
-
-                    <div class="passeio-stops">
-                        <h4 data-i18n="tour2_stops_title">Paradas previstas</h4>
-                        <ul>
-                            <li data-i18n="tour2_stop1">Ilhas Gêmeas do Mero – parada para banho em aquário natural.</li>
-                            <li data-i18n="tour2_stop2">Praia do Dentista do Sul – clima de ilha badalada e barcos ancorados.</li>
-                            <li data-i18n="tour2_stop3">Praia da Sereia Azul – tempo livre para fotos e mergulho.</li>
-                            <li data-i18n="tour2_stop4">Enseada Esmeralda – parada final para relaxar antes do retorno.</li>
-                        </ul>
-                    </div>
-
-                    <div class="passeio-incluso">
-                        <h4 data-i18n="tour2_included_title">Incluso no passeio</h4>
-                        <ul>
-                            <li data-i18n="tour2_included1">Welcome drink não alcoólico.</li>
-                            <li data-i18n="tour2_included2">Frutas frescas e petiscos simples a bordo.</li>
-                            <li data-i18n="tour2_included3">Caixa térmica com gelo para bebidas do grupo.</li>
-                            <li data-i18n="tour2_included4">Equipamentos de snorkel para contemplação dos peixes.</li>
-                        </ul>
-                    </div>
-
-                    <div class="passeio-footer">
-                        <p class="passeio-preco" data-i18n="tour2_price">Valores a partir de R$ 000,00 · Sob consulta</p>
-                        <a
-                            class="btn-whatsapp"
-                            href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Roteiro%20Ilhas%20Paradis%C3%ADacas%20do%20Barco%20Mero."
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="whatsapp_cta"
-                        >
-                            Falar no WhatsApp
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Card 3 -->
-                <article class="passeio-card">
-                    <h3 class="passeio-title" data-i18n="tour3_title">Roteiro Baía Tranquila</h3>
-
-                    <div class="passeio-meta">
-                        <span class="badge-duration" data-i18n="tour3_duration">Duração: 5h</span>
-                        <span class="badge-schedule" data-i18n="tour3_schedule">Saída 08h30 · Retorno 13h30</span>
-                    </div>
-
-                    <p class="passeio-description" data-i18n="tour3_description">
-                        Indicado para famílias, grupos com crianças e quem prefere um dia mais calmo,
-                        com paradas em enseadas protegidas e águas rasas.
-                    </p>
-
-                    <div class="passeio-stops">
-                        <h4 data-i18n="tour3_stops_title">Paradas previstas</h4>
-                        <ul>
-                            <li data-i18n="tour3_stop1">Praia de Cataguases do Mero – primeira parada para banho em água rasa.</li>
-                            <li data-i18n="tour3_stop2">Enseada do Sossego – tempo para descanso a bordo e fotos.</li>
-                            <li data-i18n="tour3_stop3">Praia da Família – parada para banho mais longa e brincadeiras.</li>
-                            <li data-i18n="tour3_stop4">Ponto de Vista Panorâmico – navegação lenta para fotos do visual da baía.</li>
-                        </ul>
-                    </div>
-
-                    <div class="passeio-incluso">
-                        <h4 data-i18n="tour3_included_title">Incluso no passeio</h4>
-                        <ul>
-                            <li data-i18n="tour3_included1">Água mineral à vontade.</li>
-                            <li data-i18n="tour3_included2">Kit de frutas selecionadas.</li>
-                            <li data-i18n="tour3_included3">Coletes infantis e adultos.</li>
-                            <li data-i18n="tour3_included4">Apoio da tripulação durante embarque e desembarque.</li>
-                        </ul>
-                    </div>
-
-                    <div class="passeio-footer">
-                        <p class="passeio-preco" data-i18n="tour3_price">Valores a partir de R$ 000,00 · Sob consulta</p>
-                        <a
-                            class="btn-whatsapp"
-                            href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Roteiro%20Ba%C3%ADa%20Tranquila%20do%20Barco%20Mero."
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="whatsapp_cta"
-                        >
-                            Falar no WhatsApp
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galeria Section -->
-    <section id="galeria" class="galeria">
-        <div class="container">
-            <h2 data-i18n="gallery_title">Galeria de Momentos</h2>
-            <p class="galeria-subtitle" data-i18n="gallery_subtitle">Descubra a beleza dos nossos passeios</p>
-            
-            <div class="gallery-grid" id="galleryGrid">
-                <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="agua-cristalina-1.jpg" alt="Água cristalina turquesa">
-                    <div class="gallery-overlay">
-                        <p class="gallery-text" data-i18n="gallery_item1">Lagoa Azul</p>
-                    </div>
-                </figure>
-
-                <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="barco-mero-1.jpg" alt="Barco Mero navegando">
-                    <div class="gallery-overlay">
-                        <p class="gallery-text" data-i18n="gallery_item2">Barco Mero</p>
-                    </div>
-                </figure>
-
-                <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="snorkel-peixes.jpg" alt="Snorkel com peixes">
-                    <div class="gallery-overlay">
-                        <p class="gallery-text" data-i18n="gallery_item3">Snorkel</p>
-                    </div>
-                </figure>
-
-                <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="por-do-sol.jpg" alt="Pôr do sol no mar">
-                    <div class="gallery-overlay">
-                        <p class="gallery-text" data-i18n="gallery_item4">Pôr do Sol</p>
-                    </div>
-                </figure>
-
-                <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="praia-paradisiaca.jpg" alt="Praia paradisíaca">
-                    <div class="gallery-overlay">
-                        <p class="gallery-text" data-i18n="gallery_item5">Praia Paradisíaca</p>
-                    </div>
-                </figure>
-
-                <figure class="gallery-item" data-lightbox="gallery">
-                    <img src="pessoas-grupo.jpg" alt="Grupo de pessoas">
-                    <div class="gallery-overlay">
-                        <p class="gallery-text" data-i18n="gallery_item6">Momentos em Grupo</p>
-                    </div>
-                </figure>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Alimentação -->
-    <section id="alimentacao-bordo" class="sessao-alimentacao">
-      <div class="container">
-        <h2 data-i18n="food_title">Comidas e Bebidas a Bordo</h2>
-
-        <p data-i18n="food_intro">
-          Para deixar a experiência ainda mais completa, disponibilizamos um cardápio
-          exclusivo de bebidas e refeições já incluídas no pacote, pensado para até
-          10 pessoas, sem preocupação extra durante o passeio.
-        </p>
-
-        <div class="alimentacao-grid">
-          <article class="card-refeicao">
-            <div class="texto-refeicao">
-              <h3 data-i18n="food_breakfast_title">Café da Manhã a Bordo</h3>
-              <p data-i18n="food_breakfast_text">
-                Oferecemos um cardápio completo de café da manhã para até 10 pessoas,
-                com opções doces e salgadas, frutas, pães, frios e bebidas quentes e
-                geladas, para você começar o dia já curtindo o visual de Angra.
-              </p>
-            </div>
-            <div class="imagem-refeicao">
-              <img src="cafe-manha-barco-mero.jpg" alt="Café da manhã servido a bordo no Barco Mero">
-            </div>
-          </article>
-
-          <article class="card-refeicao">
-            <div class="texto-refeicao">
-              <h3 data-i18n="food_lunch_title">Almoço com Vista para o Mar</h3>
-              <p data-i18n="food_lunch_text">
-                Também disponibilizamos um almoço completo para até 10 pessoas, com
-                pratos frescos e saborosos, pensado para que a sua única preocupação
-                seja aproveitar o passeio, as paradas para banho e as paisagens de Angra.
-              </p>
-            </div>
-            <div class="imagem-refeicao">
-              <img src="almoco-barco-mero.jpg" alt="Almoço servido a bordo com vista para o mar">
-            </div>
-          </article>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="logo">
+          <img src="logoMeroveto.png" alt="Agência de Turismo MERO" class="logo-img">
+          <span data-i18n="logo_text"></span>
         </div>
 
-        <p class="observacao-refeicoes" data-i18n="food_note">
-          Caso tenha alguma restrição alimentar ou preferência específfica, entre em contato
-          para personalizar o cardápio para o seu grupo.
-        </p>
+        <!-- Botões de idioma -->
+        <div class="language-switcher">
+          <button type="button" data-lang="pt">PT</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" data-i18n="nav_home">Início</a></li>
+          <li><a href="#passeios" data-i18n="nav_tours">Passeio</a></li>
+          <li><a href="#galeria" data-i18n="nav_gallery">Galeria</a></li>
+          <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <!-- Sobre -->
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p data-i18n="hero_subtitle">
+      </p>
+      <a href="#passeios" class="cta-button" data-i18n="hero_cta">Conheça o melhor Passeio de Angra dos Reis</a>
+    </div>
+  </section>
+
+  <!-- Passeio Section -->
+  <section id="passeios" class="passeios">
+  <div class="container">
+    <h2 data-i18n="tours_title">Passeio Panorâmico pela Costa</h2>
+    <p class="passeios-intro" data-i18n="tours_subtitle">
+      Uma oportunidade de conhecer um  o  melhor roteiro panorâmico pela costa de Angra dos Reis, com navegação tranquila,
+      paradas para banho de mar e vistas privilegiadas das enseadas e praias da região.
+    </p>
+
+      <div class="passeios-grid">
+        <!-- ÚNICO CARD DO PASSEIO -->
+        <article class="passeio-card">
+          <h3 class="passeio-title" data-i18n="tour1_title">Passeio Panorâmico pela Costa</h3>
+
+          <div class="passeio-meta">
+            <span class="badge-duration" data-i18n="tour1_duration">Duração: 5 horas</span>
+            <span class="badge-schedule" data-i18n="tour1_schedule">Horários: manhã ou tarde</span>
+            <span class="badge-schedule" data-i18n="tour1_capacity">Capacidade: até 89 pessoas</span>
+          </div>
+
+          <p class="passeio-description" data-i18n="tour1_description">
+            Navegação panorâmica pela costa de Angra dos Reis, passando por enseadas, ilhas e praias da região, com paradas estratégicas para banho de mar, mergulho em águas claras e aquele tempo tranquilo para registrar fotos do grupo, da paisagem e dos melhores momentos do passeio. A melhor oportunidade de desfrutar dessa costa paradisíaca com segurança, conforto e toda a atenção que você merece.
+          </p>
+
+          <div class="passeio-stops">
+            <h4 data-i18n="tour1_stops_title">Paradas principais</h4>
+            <ul>
+              <li data-i18n="tour1_stop1">Enseadas e praias da região.</li>
+              <li data-i18n="tour1_stop2">Pontos estratégicos para banho de mar.</li>
+            </ul>
+          </div>
+
+          <div class="passeio-incluso">
+            <h4 data-i18n="tour1_included_title">Incluído</h4>
+            <ul>
+              <li data-i18n="tour1_included1">Embarcação com tripulação preparada e experiente.</li>
+              <li data-i18n="tour1_included2">Roteiro Personalizado</li>
+              <li data-i18n="tour1_included3">Equipamentos de segurança.</li>
+            </ul>
+          </div>
+
+          <div class="passeio-incluso">
+            <h4 data-i18n="tour1_not_included_title">Não incluído</h4>
+            <ul>
+              <li data-i18n="tour1_not_included1">Alimentação.</li>
+              <li data-i18n="tour1_not_included2">Bebida alcoólica.</li>
+            </ul>
+          </div>
+
+          <div class="passeio-footer">
+            <p class="passeio-preco" data-i18n="tour1_price">
+              Valores sob consulta · Fale com a Agência MERO para receber uma proposta para o seu grupo.
+            </p>
+            <a
+              class="btn-whatsapp"
+              href="https://wa.me/552493256372?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Passeio%20Panor%C3%A2mico%20pela%20Costa."
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="whatsapp_cta"
+            >
+              Falar no WhatsApp
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria Section -->
+ <section id="galeria" class="galeria">
+  <div class="container">
+    <h2 data-i18n="gallery_title">Galeria de Momentos</h2>
+    <p class="galeria-subtitle" data-i18n="gallery_subtitle">
+      Conheça um pouco do visual do passeio e do Barco Mero em ação.
+    </p>
+
+    <div class="gallery-wrapper">
+  <button class="gallery-nav gallery-prev" aria-label="Fotos anteriores">
+    ‹
+  </button>
+
+  <div class="gallery-grid" id="galleryGrid">
+    <!-- 1 -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="mero10.jpeg" alt="Barco Mero navegando">
+      <div class="gallery-overlay">
+        <p class="gallery-text" data-i18n="gallery_item1">Barco Mero no ponto de embarque</p>
+      </div>
+    </figure>
+
+    <!-- 2 -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="merofora2.jpg" alt="Barco Mero ancorado no píer">
+      <div class="gallery-overlay">
+        <p class="gallery-text" data-i18n="gallery_item2">Embarque no cais de Angra dos Reis</p>
+      </div>
+    </figure>
+    <!-- 3 -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="merofora21.png" alt="Grupo de pessoas a bordo">
+      <div class="gallery-overlay">
+        <p class="gallery-text" data-i18n="gallery_item3">atracando curtindo o passeio</p>
+      </div>
+    </figure>
+    <!-- 3 -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="familia1.jpg" alt="Grupo de pessoas a bordo">
+      <div class="gallery-overlay">
+        <p class="gallery-text" data-i18n="gallery_item3">Grupos e famílias a bordo</p>
+      </div>
+    </figure>
+
+    <!-- 4 -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="por-do-sol.jpg" alt="Pôr do sol no mar">
+      <div class="gallery-overlay">
+        <p class="gallery-text" data-i18n="gallery_item4">Pôr do sol na baía</p>
+      </div>
+    </figure>
+
+    <!-- 5 -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="praia-paradisiaca.jpg" alt="Praia paradisíaca">
+      <div class="gallery-overlay">
+        <p class="gallery-text" data-i18n="gallery_item5">Praias e enseadas da região</p>
+      </div>
+    </figure>
+
+    <!-- 6 -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="snorkel-peixes.jpg" alt="Snorkel com peixes">
+      <div class="gallery-overlay">
+        <p class="gallery-text" data-i18n="gallery_item6">Snorkel em água cristalina</p>
+      </div>
+    </figure>
+
+    <!-- 7: panorâmica do barco no píer -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="ancorado.jpg" alt="Barco Mero ancorado no píer de Angra dos Reis">
+      <div class="gallery-overlay">
+        <p class="gallery-text">parada para almoço em pontos parceiros</p>
+      </div>
+    </figure>
+
+    <!-- 8: peixes e água cristalina -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="agua-cristalina.jpg" alt="Água cristalina com peixes">
+      <div class="gallery-overlay">
+        <p class="gallery-text">Água cristalina para banho e snorkel</p>
+      </div>
+    </figure>
+
+    <!-- 9: vista aérea da praia -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="angra15.jpg" alt="Vista aérea de enseada em Angra dos Reis">
+      <div class="gallery-overlay">
+        <p class="gallery-text">Enseadas e ilhas do roteiro</p>
+      </div>
+    </figure>
+
+    <!-- 10: praia vista do barco -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="merovistadrone.png" alt="Praia vista a partir do barco">
+      <div class="gallery-overlay">
+        <p class="gallery-text">Chegada às praias pelo Barco Mero</p>
+      </div>
+    </figure>
+
+    <!-- 11: parada em praia com quiosques -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="angra14.jpg" alt="Praia com quiosques e barcos ancorados">
+      <div class="gallery-overlay">
+        <p class="gallery-text">paissagens tipicas da região</p>
+      </div>
+    </figure>
+
+    <!-- 12: barco em águas verdes -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="mero12.jpeg" alt="Barco Mero em águas verdes de Angra dos Reis">
+      <div class="gallery-overlay">
+        <p class="gallery-text">Barco Mero em águas verdes</p>
+      </div>
+    </figure>
+
+    <!-- 13: barco com fundo de peixes (caso queira repetir em alta) -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="foraedit.png" alt="Barco Mero com peixes ao fundo">
+      <div class="gallery-overlay">
+        <p class="gallery-text">Visual panorâmico</p>
+      </div>
+    </figure>
+
+    <!-- 14: segundo ângulo do barco no píer -->
+    <figure class="gallery-item" data-lightbox="gallery">
+      <img src="equipe.jpg" alt="Barco Mero atracado no cais">
+      <div class="gallery-overlay">
+        <p class="gallery-text">Profissionais do barco</p>
+      </div>
+    </figure>
+  </div>
+
+  <button class="gallery-nav gallery-next" aria-label="Próximas fotos">
+    ›
+  </button>
+</div>
+    </div>
+  </div>
+</section>
     <section id="sobre" class="sobre">
       <div class="container">
         <div class="sobre-content">
@@ -313,7 +263,7 @@
             <h2 data-i18n="about_title">Sobre o Barco Mero</h2>
             <p data-i18n="about_p1">
               O Barco Mero oferece passeios marítimos exclusivos em Angra dos Reis e região,
-              com roteiros planejados para grupos de até 10 pessoas, unindo conforto, segurança
+              com roteiros planejados para grupos de amigos e familia, unindo conforto, segurança
               e contato direto com as belezas naturais da baía.
             </p>
             <p data-i18n="about_p2">
@@ -371,9 +321,13 @@
             <div class="contato-info">
               <h3 data-i18n="contact_channels_title">Canais de atendimento</h3>
               <ul>
-                <li><strong>WhatsApp:</strong> <span data-i18n="contact_whatsapp">(21) 00000-0000</span></li>
-                <li><strong>Telefone:</strong> <span data-i18n="contact_phone">(21) 0000-0000</span></li>
-                <li><strong>E-mail:</strong> <span data-i18n="contact_email">contato@barcomero.com.br</span></li>
+                <li><strong>WhatsApp:</strong> <span data-i18n="contact_whatsapp">(24)99325-6372</span></li>
+               <li>
+  <strong>Instagram:</strong>
+  <a
+href="https://www.instagram.com/mero_turismo" target="_blank" rel="noopener noreferrer" class="btn-instagram"
+  > Mero_turismo </a>
+</li>
               </ul>
               <p class="contato-observacao" data-i18n="contact_note">
                 Horário de atendimento: diariamente, das 08h às 18h
@@ -389,7 +343,7 @@
               </p>
               <a
                 class="btn-whatsapp btn-whatsapp-grande"
-                href="https://wa.me/5521XXXXXXXXX?text=Ol%C3%A1,%20gostaria%20de%20reservar%20um%20passeio%20no%20Barco%20Mero."
+                href="https://wa.me/552493256372?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Passeio%20Panor%C3%A2mico%20pela%20Costa."
                 target="_blank"
                 rel="noopener noreferrer"
                 data-i18n="whatsapp_cta_full"
@@ -409,14 +363,21 @@
         <p id="lightboxCaption"></p>
     </div>
 
+    <!-- Modal Lightbox -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImage" src="" alt="">
+        <p id="lightboxCaption"></p>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Barco Mero. Todos os direitos reservados.</p>
-            <p>-em desenvolvimento-</p>
+            <p>&copy; 2026 Agência Barco Mero. Todos os direitos reservados.</p>
+            <p></p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="newmain.js"></script>
 </body>
 </html>
