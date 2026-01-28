@@ -8,8 +8,6 @@ const translations = {
     nav_contact: "Contato",
 
     hero_title: "Bem-vindo à Agência de Turismo MERO",
-    hero_subtitle:
-      "Passeio Panorâmico pela Costa de Angra dos Reis com conforto, segurança e vistas inesquecíveis.",
     hero_cta: "Conheça o Passeio Panorâmico",
 
     tours_title: "Passeio Panorâmico pela Costa",
@@ -91,8 +89,6 @@ const translations = {
     nav_contact: "Contact",
 
     hero_title: "Welcome to MERO Tourism Agency",
-    hero_subtitle:
-      "Panoramic Coast Tour in Angra dos Reis with comfort, safety and unforgettable views.",
     hero_cta: "Discover the Panoramic Tour",
 
     tours_title: "Panoramic Coast Tour",
