@@ -268,7 +268,7 @@ h4 {
   transition: transform 0.15s ease, box-shadow 0.15s ease,
     background-color 0.15s ease;
 
-  margin-top: 18.5rem;
+  margin-top: 12.5rem;
 }
 
 .cta-button:hover {
@@ -820,30 +820,11 @@ body.theme-ocean .footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
 @media (max-width: 768px) {
   .hero {
-    min-height: 460px;
-    align-items: flex-end;          /* desce o conteúdo */
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-    background-size: 120%;          /* dá um leve zoom pra caber melhor */
-    background-position: center 0%;
+    min-height: 380px;
   }
-
-  .hero-content {
-    text-align: center;
-  }
-
-  .hero-content h2 {
-    color: #000000;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
-  }
-
-  .hero-content p {
-    color: #000000;
-    text-shadow: 0 0 4px rgba(255, 255, 255, 0.9);
-  }
-}
 
   .hero-content h2 {
     color: #000000;
