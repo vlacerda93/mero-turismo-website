@@ -80,7 +80,7 @@ const translations = {
       "Clique no botão abaixo para iniciar uma conversa direta pelo WhatsApp e informar a data desejada, número de pessoas e detalhes do seu grupo.",
 
     whatsapp_cta: "Falar no WhatsApp",
-    whatsapp_cta_full: "Falar com a Agência MERO no WhatsApp"
+    whatsapp_cta_full: "Falar com a Agência MERO no WhatsApp",
   },
 
   en: {
@@ -162,12 +162,11 @@ const translations = {
       "Click the button below to start a WhatsApp conversation and inform the desired date, number of people and group details.",
 
     whatsapp_cta: "Chat on WhatsApp",
-    whatsapp_cta_full: "Talk to MERO Agency on WhatsApp"
-  }
+    whatsapp_cta_full: "Talk to MERO Agency on WhatsApp",
+  },
 };
 
 // ===== Função de idioma =====
-
 function setLanguage(lang) {
   const elements = document.querySelectorAll("[data-i18n]");
   elements.forEach((el) => {
@@ -180,10 +179,19 @@ function setLanguage(lang) {
   document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
 }
 
-// ===== Inicialização =====
+// ===== Tema (white / ocean) =====
+function setTheme(theme) {
+  const body = document.body;
+  body.classList.remove("theme-default", "theme-ocean");
+  body.classList.add(`theme-${theme}`);
+  localStorage.setItem("meroTheme", theme);
+}
 
+// ===== Inicialização (idioma + galeria + tema) =====
 document.addEventListener("DOMContentLoaded", () => {
-  // Idioma inicial
+  console.log("DOMContentLoaded MERO");
+
+  // ----- Idioma -----
   const savedLang = localStorage.getItem("mero_lang") || "pt";
   setLanguage(savedLang);
 
@@ -197,14 +205,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Galeria com paginação 6x6
+  // ----- Galeria com paginação 6x6 -----
   const galleryGrid = document.getElementById("galleryGrid");
   if (galleryGrid) {
     const items = Array.from(galleryGrid.querySelectorAll(".gallery-item"));
     const prevBtn = document.querySelector(".gallery-prev");
     const nextBtn = document.querySelector(".gallery-next");
 
-    const pageSize = 6; // 6 imagens por página
+    const pageSize = 6;
     let currentPage = 0;
     const totalPages = Math.ceil(items.length / pageSize);
 
@@ -244,61 +252,63 @@ document.addEventListener("DOMContentLoaded", () => {
     renderPage(currentPage);
   }
 
+  // ----- Tema (white / ocean) -----
+  const savedTheme = localStorage.getItem("meroTheme") || "default";
+  setTheme(savedTheme);
+
+  const themeButtons = document.querySelectorAll(".theme-switcher button");
+  themeButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const theme = btn.getAttribute("data-theme");
+      setTheme(theme);
+    });
+  });
+
+  // ----- Lightbox da galeria -----
+  const lightboxModal = document.getElementById("lightboxModal");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const lightboxCaption = document.getElementById("lightboxCaption");
+  const lightboxClose = document.querySelector(".lightbox-close");
+
+  if (lightboxModal && lightboxImage && lightboxCaption) {
+    console.log("Lightbox pronto");
+    const galleryImages = document.querySelectorAll(".gallery-item img");
+    console.log("Qtd imagens na galeria:", galleryImages.length);
+
+    galleryImages.forEach((img, index) => {
+      console.log("Registrando clique na imagem", index);
+      img.addEventListener("click", () => {
+        console.log("Clique na imagem", index);
+        const figure = img.closest(".gallery-item");
+        const captionEl = figure.querySelector(".gallery-text");
+
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt || "";
+        lightboxCaption.textContent = captionEl ? captionEl.textContent : "";
+        lightboxModal.classList.add("open");
+        lightboxModal.setAttribute("aria-hidden", "false");
+      });
+    });
+
+    lightboxClose.addEventListener("click", () => {
+      lightboxModal.classList.remove("open");
+      lightboxModal.setAttribute("aria-hidden", "true");
+    });
+
+    lightboxModal.addEventListener("click", (e) => {
+      if (e.target === lightboxModal) {
+        lightboxModal.classList.remove("open");
+        lightboxModal.setAttribute("aria-hidden", "true");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightboxModal.classList.contains("open")) {
+        lightboxModal.classList.remove("open");
+        lightboxModal.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+
   console.log("MERO site - main.js ready!");
 });
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const galleryGrid = document.getElementById("galleryGrid");
-  if (!galleryGrid) {
-    console.log("galleryGrid não encontrado");
-    return;
-  }
-
-  const items = Array.from(galleryGrid.querySelectorAll(".gallery-item"));
-  const prevBtn = document.querySelector(".gallery-prev");
-  const nextBtn = document.querySelector(".gallery-next");
-
-  console.log("Itens na galeria:", items.length);
-
-  const pageSize = 6; // 6 imagens por página
-  let currentPage = 0;
-  const totalPages = Math.ceil(items.length / pageSize);
-
-  function renderPage(page) {
-    items.forEach((item, index) => {
-      const start = page * pageSize;
-      const end = start + pageSize;
-      if (index >= start && index < end) {
-        item.style.display = "";
-      } else {
-        item.style.display = "none";
-      }
-    });
-
-    if (prevBtn) prevBtn.disabled = page === 0;
-    if (nextBtn) nextBtn.disabled = page === totalPages - 1;
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-      if (currentPage > 0) {
-        currentPage -= 1;
-        renderPage(currentPage);
-      }
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-      if (currentPage < totalPages - 1) {
-        currentPage += 1;
-        renderPage(currentPage);
-      }
-    });
-  }
-
-  renderPage(currentPage); // mostra só 6
-});
-

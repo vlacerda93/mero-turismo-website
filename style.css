@@ -37,6 +37,50 @@
   --shadow-strong: 0 16px 35px rgba(0, 0, 0, 0.12);
 }
 
+/* Switch de cores (White / Blue) */
+.theme-switcher {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.theme-switcher button {
+  border: none;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.08);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.theme-switcher button:hover {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+/* Tema padrão (White) */
+body.theme-default {
+  background-color: #ffffff;
+}
+
+/* Tema mar (Blue/Ocean) */
+body.theme-ocean {
+  background: linear-gradient(
+    180deg,
+    #e0faff 0%,
+    #b6f0ff 30%,
+    #7ad9ff 60%,
+    #1f7bbf 100%
+  );
+}
+
+/* Passeios reagindo ao tema */
+body.theme-default .passeios {
+  background-color: var(--background-light);
+}
+
+body.theme-ocean .passeios {
+  background-color: transparent;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -44,9 +88,11 @@ html {
 body {
   font-family: var(--font-base);
   color: var(--text-color);
-  background-color: #ffffff;
   line-height: 1.6;
 }
+
+/* Switch de idioma */
+
 .language-switcher {
   display: flex;
   gap: 0.4rem;
@@ -58,14 +104,14 @@ body {
   border: none;
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
   color: #fff;
   font-size: 0.75rem;
   cursor: pointer;
 }
 
 .language-switcher button:hover {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* Containers */
@@ -112,10 +158,11 @@ h4 {
 
 /* aqui você controla o tamanho real da logo */
 .logo-img {
-  height: 40px;   /* testa 32, 36, 40 até ficar bom */
+  height: 40px; /* testa 32, 36, 40 até ficar bom */
   width: auto;
   display: block;
 }
+
 .nav-menu {
   list-style: none;
   display: flex;
@@ -166,9 +213,10 @@ h4 {
 /* =========================
    Hero
    ========================= */
+
 .hero {
   position: relative;
-  min-height: 500px;              /* garante altura fixa boa */
+  min-height: 500px; /* garante altura fixa boa */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,23 +225,20 @@ h4 {
   text-align: center;
 
   background-image: url("logoMeroveto.png");
-  background-size: 100%;          /* zoom moderado */
-  background-position: center 15%;/* ajusta barco + peixes */
+  background-size: 100%; /* zoom moderado */
+  background-position: center 15%; /* ajusta barco + peixes */
   background-repeat: no-repeat;
-
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-
-;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;   
+  z-index: 1;
   max-width: 640px;
   padding: 0 var(--spacing-sm);
 }
@@ -223,7 +268,7 @@ h4 {
   transition: transform 0.15s ease, box-shadow 0.15s ease,
     background-color 0.15s ease;
 
-  margin-top: 18.5rem;  /* ajusta o valor até ficar na altura que você quer */
+  margin-top: 18.5rem; /* ajusta o valor até ficar na altura que você quer */
 }
 
 .cta-button:hover {
@@ -231,6 +276,9 @@ h4 {
   transform: translateY(-1px);
   box-shadow: 0 16px 34px rgba(129, 159, 241, 0.5);
 }
+
+/* Navegação da galeria */
+
 .gallery-wrapper {
   display: flex;
   align-items: center;
@@ -242,21 +290,18 @@ h4 {
   width: 32px;
   height: 32px;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   background-color: #ffffff;
-  color: #006d7a;              /* azul do site */
+  color: #006d7a; /* azul do site */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 1.4rem;
   line-height: 1;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition:
-    background-color 0.15s ease,
-    color 0.15s ease,
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.15s ease, color 0.15s ease,
+    transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .gallery-nav:hover {
@@ -270,10 +315,11 @@ h4 {
 @media (max-width: 768px) {
   .gallery-nav {
     width: 28px;
-    height: 28px;       
+    height: 28px;
     font-size: 1.2rem;
   }
 }
+
 /* =========================
    Passeios
    ========================= */
@@ -297,7 +343,7 @@ h4 {
 
 .passeios-grid {
   display: flex;
-  justify-content: center;     /* centraliza horizontalmente */
+  justify-content: center; /* centraliza horizontalmente */
 }
 
 .passeio-card {
@@ -310,11 +356,12 @@ h4 {
   gap: var(--spacing-md);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  max-width: 820px;            /* controla o “tamanho visual” do card */
-  width: 100%;                 /* ocupa até esse limite */
-  margin: 0 auto;              /* garante centralização */
+  max-width: 820px; /* controla o “tamanho visual” do card */
+  width: 100%; /* ocupa até esse limite */
+  margin: 0 auto; /* garante centralização */
 }
-.passeios-intro{
+
+.passeios-intro {
   text-align: center;
   max-width: 720px;
   margin: 0 auto var(--spacing-xl);
@@ -419,7 +466,9 @@ h4 {
   transform: translateY(-1px);
   box-shadow: 0 6px 14px rgba(37, 211, 102, 0.4);
 }
-  /* Botão Instagram  */
+
+/* Botão Instagram */
+
 .btn-instagram {
   display: inline-flex;
   align-items: center;
@@ -443,10 +492,17 @@ h4 {
   font-weight: 500;
 }
 
-
 /* =========================
    Galeria com lightbox
    ========================= */
+
+body.theme-default .galeria {
+  background-color: #ffffff;
+}
+
+body.theme-ocean .galeria {
+  background-color: transparent;
+}
 
 .galeria {
   padding: var(--spacing-3xl) 0;
@@ -553,8 +609,6 @@ h4 {
   cursor: pointer;
 }
 
-
-
 /* =========================
    Sobre
    ========================= */
@@ -620,8 +674,16 @@ h4 {
    ========================= */
 
 .contato {
-  padding: var(--spacing-xl) 0;           /* reduz altura da seção */
+  padding: var(--spacing-xl) 0; /* reduz altura da seção */
   background-color: var(--background-light);
+}
+
+body.theme-default .contato {
+  background-color: var(--background-light);
+}
+
+body.theme-ocean .contato {
+  background-color: transparent;
 }
 
 .contato-content {
@@ -643,16 +705,16 @@ h4 {
 .contato-blocos {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  gap: var(--spacing-lg);                 /* era var(--spacing-xl) */
+  gap: var(--spacing-lg); /* era var(--spacing-xl) */
   align-items: stretch;
 }
 
 .contato-info {
   background-color: #ffffff;
-  border-radius: var(--radius-md);        /* era var(--radius-lg) */
-  padding: var(--spacing-md);             /* era var(--spacing-lg) */
+  border-radius: var(--radius-md); /* era var(--radius-lg) */
+  padding: var(--spacing-md); /* era var(--spacing-lg) */
   box-shadow: var(--shadow-soft);
-} 
+}
 
 .contato-info h3 {
   margin-bottom: var(--spacing-sm);
@@ -677,13 +739,13 @@ h4 {
 
 .contato-cta {
   background-color: var(--primary-color);
-  border-radius: var(--radius-md);        /* era var(--radius-lg) */
-  padding: var(--spacing-md);             /* era var(--spacing-lg) */
+  border-radius: var(--radius-md); /* era var(--radius-lg) */
+  padding: var(--spacing-md); /* era var(--spacing-lg) */
   color: #ffffff;
-  box-shadow: 0 10px 22px rgba(0, 188, 212, 0.30); /* sombra um pouco menor */
+  box-shadow: 0 10px 22px rgba(0, 188, 212, 0.3); /* sombra um pouco menor */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);                 /* era var(--spacing-sm) */
+  gap: var(--spacing-xs); /* era var(--spacing-sm) */
   justify-content: center;
 }
 
@@ -712,6 +774,14 @@ h4 {
   color: var(--text-muted);
   background-color: #ffffff;
   border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+body.theme-default .footer {
+  background-color: #ffffff;
+}
+
+body.theme-ocean .footer {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* =========================
