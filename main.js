@@ -1,6 +1,5 @@
 // ===== Traduções PT/EN =====
-
-const translations = {
+const translations = { 
   pt: {
     nav_home: "Início",
     nav_tours: "Passeio",
@@ -10,6 +9,7 @@ const translations = {
 
     hero_title: "Bem-vindo à Agência de Turismo MERO",
     hero_subtitle:
+      "Passeio Panorâmico pela Costa de Angra dos Reis com conforto, segurança e vistas inesquecíveis.",
     hero_cta: "Conheça o Passeio Panorâmico",
 
     tours_title: "Passeio Panorâmico pela Costa",
@@ -92,7 +92,7 @@ const translations = {
 
     hero_title: "Welcome to MERO Tourism Agency",
     hero_subtitle:
-      
+      "Panoramic Coast Tour in Angra dos Reis with comfort, safety and unforgettable views.",
     hero_cta: "Discover the Panoramic Tour",
 
     tours_title: "Panoramic Coast Tour",
@@ -189,14 +189,11 @@ function setTheme(theme) {
 // ===== Inicialização (idioma + galeria + tema) =====
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOMContentLoaded MERO");
-
   // ----- Idioma -----
-  const savedLang = localStorage.getItem("mero_lang") || "pt";
+ const savedLang = localStorage.getItem("mero_lang") || "pt";
   setLanguage(savedLang);
 
-  const langButtons = document.querySelectorAll(
-    ".language-switcher [data-lang]"
-  );
+  const langButtons = document.querySelectorAll(".language-switcher [data-lang]");
   langButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const lang = btn.getAttribute("data-lang");
@@ -204,7 +201,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ----- Galeria com paginação 6x6 -----
   const galleryGrid = document.getElementById("galleryGrid");
   if (galleryGrid) {
     const items = Array.from(galleryGrid.querySelectorAll(".gallery-item"));
@@ -219,11 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
       items.forEach((item, index) => {
         const start = page * pageSize;
         const end = start + pageSize;
-        if (index >= start && index < end) {
-          item.style.display = "";
-        } else {
-          item.style.display = "none";
-        }
+        item.style.display = index >= start && index < end ? "" : "none";
       });
 
       if (prevBtn) prevBtn.disabled = page === 0;
