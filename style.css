@@ -419,6 +419,30 @@ h4 {
   transform: translateY(-1px);
   box-shadow: 0 6px 14px rgba(37, 211, 102, 0.4);
 }
+  /* Botão Instagram  */
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn-instagram:hover {
+  text-decoration: underline;
+}
+
+.insta-icon {
+  font-size: 1rem;
+}
+
+.insta-text {
+  font-weight: 500;
+}
+
 
 /* =========================
    Galeria com lightbox
@@ -596,7 +620,7 @@ h4 {
    ========================= */
 
 .contato {
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-xl) 0;           /* reduz altura da seção */
   background-color: var(--background-light);
 }
 
@@ -619,16 +643,16 @@ h4 {
 .contato-blocos {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);                 /* era var(--spacing-xl) */
   align-items: stretch;
 }
 
 .contato-info {
   background-color: #ffffff;
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);        /* era var(--radius-lg) */
+  padding: var(--spacing-md);             /* era var(--spacing-lg) */
   box-shadow: var(--shadow-soft);
-}
+} 
 
 .contato-info h3 {
   margin-bottom: var(--spacing-sm);
@@ -653,13 +677,13 @@ h4 {
 
 .contato-cta {
   background-color: var(--primary-color);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);        /* era var(--radius-lg) */
+  padding: var(--spacing-md);             /* era var(--spacing-lg) */
   color: #ffffff;
-  box-shadow: 0 12px 28px rgba(0, 188, 212, 0.35);
+  box-shadow: 0 10px 22px rgba(0, 188, 212, 0.30); /* sombra um pouco menor */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);                 /* era var(--spacing-sm) */
   justify-content: center;
 }
 
