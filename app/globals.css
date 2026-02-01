@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
+/* Tema base */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #020617;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #020617;
+    --foreground: #ffffff;
   }
 }
 
+/* Body padrão */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* CARD TIPO BOIA – usado no card do passeio */
+.card-boia {
+  position: relative;
+  background: #020617;              /* mesmo tom do site ou #0b1120 */
+  border-radius: 24px;
+  padding: 24px 26px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.6);
+  color: #e5f2ff;
+  overflow: hidden;                 /* agora corta no limite do card */
+}
+
+/* duas bordas coladas na borda do card */
+.card-boia {
+  position: relative;
+  /* Removido o background-color daqui para não cobrir o ::before */
+  border-radius: 28px;
+  padding: 2.5rem; /* Ajuste o respiro interno para não colar na boia */
+  color: #0f172a;
+  display: block;
+  z-index: 1; /* Garante que o card crie um novo contexto de empilhamento */
+}
+
+.card-boia::before {
+  content: "";
+  position: absolute;
+  /* O inset: 0 faz ele ocupar todo o espaço do card */
+  inset: 0; 
+  border-radius: inherit;
+
+  /* A "mágica" das duas camadas de background: */
+  background: 
+    /* 1. O fundo branco do conteúdo (limitado à área de padding) */
+    linear-gradient(#ffffff, #ffffff) padding-box, 
+    /* 2. A boia listrada (que aparece na área da borda) */
+    repeating-linear-gradient(
+      45deg,
+      #ff7a3c 0 20px,   /* Laranja forte */
+      #ff9a5a 20px 30px, /* Laranja claro */
+      #ffffff 30px 50px  /* Faixa branca */
+    ) border-box;
+
+  /* A espessura da boia é definida aqui */
+  border: 12px solid transparent; 
+  
+  /* Sombras para dar efeito 3D de boia */
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.2), 
+    inset 0 0 15px rgba(255, 255, 255, 0.5);
+
+  z-index: -1; /* Agora ele fica atrás do texto, mas como o pai é transparente, ele aparece! */
+  pointer-events: none;
 }
