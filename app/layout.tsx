@@ -15,6 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mero Turismo | Passeios Náuticos em Angra dos Reis",
   description: "Viva experiências inesquecíveis em Angra dos Reis com a Mero Turismo. Passeios de barco, mergulho e as melhores praias da Costa Verde.",
+  keywords: [
+    "Passeio de barco Angra dos Reis",
+    "Turismo em Angra",
+    "Ilhas Paradisíacas",
+    "Aluguel de Lancha",
+    "Passeio de Escuna",
+    "Mergulho em Angra",
+    "Ilha Grande",
+    "Praia do Dentista",
+    "Ilhas Botinas",
+    "Passeio Náutico Família",
+  ],
   openGraph: {
     title: "Mero Turismo | Passeios Náuticos em Angra dos Reis",
     description: "Agende seu passeio de barco e conheça o paraíso.",
