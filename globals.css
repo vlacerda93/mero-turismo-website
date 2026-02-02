@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* Tema base */
+:root {
+  --background: #020617;
+  --foreground: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020617;
+    --foreground: #ffffff;
+  }
+}
+
+/* Body padrão */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* CARD TIPO BOIA – usado no card do passeio */
+.card-boia {
+  position: relative;
+  /* Removido o background-color daqui para não cobrir o ::before */
+  border-radius: 28px;
+  padding: 2.5rem;
+  /* Ajuste o respiro interno para não colar na boia */
+  color: #0f172a;
+  display: block;
+  z-index: 1;
+  /* Garante que o card crie um novo contexto de empilhamento */
+}
+
+.card-boia::before {
+  content: "";
+  position: absolute;
+  /* O inset: 0 faz ele ocupar todo o espaço do card */
+  inset: 0;
+  border-radius: inherit;
+
+  /* A "mágica" das duas camadas de background: */
+  background:
+    /* 1. O fundo branco do conteúdo (limitado à área de padding) */
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    /* 2. A boia listrada (que aparece na área da borda) */
+    repeating-linear-gradient(45deg,
+      #ff7a3c 0 20px,
+      /* Laranja forte */
+      #ff9a5a 20px 30px,
+      /* Laranja claro */
+      #ffffff 30px 50px
+      /* Faixa branca */
+    ) border-box;
+
+  /* A espessura da boia é definida aqui */
+  border: 12px solid transparent;
+
+  /* Sombras para dar efeito 3D de boia */
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.5);
+
+  z-index: -1;
+  /* Agora ele fica atrás do texto, mas como o pai é transparente, ele aparece! */
+  pointer-events: none;
+}
+
+/* ========================================= */
+/* RESPONSIVIDADE (Novas classes adicionadas) */
+/* ========================================= */
+
+.responsive-grid-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.responsive-grid-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.responsive-grid-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.responsive-header-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.responsive-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Desktop Styles (min-width: 768px is Tablet/PC) */
+@media (min-width: 768px) {
+  .responsive-grid-hero {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  }
+
+  .responsive-grid-card {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  }
+
+  .responsive-grid-details {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .responsive-header-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .responsive-nav {
+    justify-content: flex-start;
+  }
+}
