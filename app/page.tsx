@@ -28,230 +28,74 @@ export default function Home() {
     {
       id: 1,
       imageSrc: "/merofotos/barco-mero-1.jpg",
-      content: (
-        <div>
-          <img
-            src="/merofotos/barco-mero-1.jpg"
-            alt={t.gallery_1_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_1_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_1_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_1_title,
+      description: t.gallery_1_desc,
     },
     {
       id: 2,
       imageSrc: "/merofotos/merofora2.jpg",
-      content: (
-        <div>
-          <img
-            src="/merofotos/merofora2.jpg"
-            alt={t.gallery_2_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_2_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_2_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_2_title,
+      description: t.gallery_2_desc,
     },
     {
       id: 3,
       imageSrc: "/merofotos/merofora21.png",
-      content: (
-        <div>
-          <img
-            src="/merofotos/merofora21.png"
-            alt={t.gallery_3_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_3_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_3_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_3_title,
+      description: t.gallery_3_desc,
     },
     {
       id: 4,
       imageSrc: "/merofotos/familia1.jpg",
-      content: (
-        <div>
-          <img
-            src="/merofotos/familia1.jpg"
-            alt={t.gallery_4_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_4_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_4_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_4_title,
+      description: t.gallery_4_desc,
     },
     {
       id: 5,
       imageSrc: "/merofotos/ancorado.jpg",
-      content: (
-        <div>
-          <img
-            src="/merofotos/ancorado.jpg"
-            alt={t.gallery_5_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_5_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_5_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_5_title,
+      description: t.gallery_5_desc,
     },
     {
       id: 6,
       imageSrc: "/merofotos/agua-cristalina.jpg",
-      content: (
-        <div>
-          <img
-            src="/merofotos/agua-cristalina.jpg"
-            alt={t.gallery_6_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_6_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_6_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_6_title,
+      description: t.gallery_6_desc,
     },
     {
       id: 7,
       imageSrc: "/merofotos/angra15.jpg",
-      content: (
-        <div>
-          <img
-            src="/merofotos/angra15.jpg"
-            alt={t.gallery_7_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_7_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_7_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_7_title,
+      description: t.gallery_7_desc,
     },
     {
       id: 8,
       imageSrc: "/merofotos/merovistadrone.png",
-      content: (
-        <div>
-          <img
-            src="/merofotos/merovistadrone.png"
-            alt={t.gallery_8_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_8_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_8_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_8_title,
+      description: t.gallery_8_desc,
     },
     {
       id: 9,
       imageSrc: "/merofotos/angra14.jpg",
-      content: (
-        <div>
-          <img
-            src="/merofotos/angra14.jpg"
-            alt={t.gallery_9_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_9_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_9_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_9_title,
+      description: t.gallery_9_desc,
     },
     {
       id: 10,
       imageSrc: "/merofotos/mero12.jpeg",
-      content: (
-        <div>
-          <img
-            src="/merofotos/mero12.jpeg"
-            alt={t.gallery_10_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_10_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_10_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_10_title,
+      description: t.gallery_10_desc,
     },
     {
       id: 11,
       imageSrc: "/merofotos/foraedit.png",
-      content: (
-        <div>
-          <img
-            src="/merofotos/foraedit.png"
-            alt={t.gallery_11_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_11_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_11_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_11_title,
+      description: t.gallery_11_desc,
     },
     {
       id: 12,
       imageSrc: "/merofotos/equipe.jpg",
-      content: (
-        <div>
-          <img
-            src="/merofotos/equipe.jpg"
-            alt={t.gallery_12_title}
-            style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
-          />
-          <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            {t.gallery_12_title}
-          </h3>
-          <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            {t.gallery_12_desc}
-          </p>
-        </div>
-      ),
+      title: t.gallery_12_title,
+      description: t.gallery_12_desc,
     },
   ];
 
