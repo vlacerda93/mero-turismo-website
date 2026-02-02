@@ -26,40 +26,45 @@ body {
   position: relative;
   /* Removido o background-color daqui para não cobrir o ::before */
   border-radius: 28px;
-  padding: 2.5rem; /* Ajuste o respiro interno para não colar na boia */
+  padding: 2.5rem;
+  /* Ajuste o respiro interno para não colar na boia */
   color: #0f172a;
   display: block;
-  z-index: 1; /* Garante que o card crie um novo contexto de empilhamento */
+  z-index: 1;
+  /* Garante que o card crie um novo contexto de empilhamento */
 }
 
 .card-boia::before {
   content: "";
   position: absolute;
   /* O inset: 0 faz ele ocupar todo o espaço do card */
-  inset: 0; 
+  inset: 0;
   border-radius: inherit;
 
   /* A "mágica" das duas camadas de background: */
-  background: 
+  background:
     /* 1. O fundo branco do conteúdo (limitado à área de padding) */
-    linear-gradient(#ffffff, #ffffff) padding-box, 
+    linear-gradient(#ffffff, #ffffff) padding-box,
     /* 2. A boia listrada (que aparece na área da borda) */
-    repeating-linear-gradient(
-      45deg,
-      #ff7a3c 0 20px,   /* Laranja forte */
-      #ff9a5a 20px 30px, /* Laranja claro */
-      #ffffff 30px 50px  /* Faixa branca */
+    repeating-linear-gradient(45deg,
+      #ff7a3c 0 20px,
+      /* Laranja forte */
+      #ff9a5a 20px 30px,
+      /* Laranja claro */
+      #ffffff 30px 50px
+      /* Faixa branca */
     ) border-box;
 
   /* A espessura da boia é definida aqui */
-  border: 12px solid transparent; 
-  
+  border: 12px solid transparent;
+
   /* Sombras para dar efeito 3D de boia */
-  box-shadow: 
-    0 15px 35px rgba(0, 0, 0, 0.2), 
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.2),
     inset 0 0 15px rgba(255, 255, 255, 0.5);
 
-  z-index: -1; /* Agora ele fica atrás do texto, mas como o pai é transparente, ele aparece! */
+  z-index: -1;
+  /* Agora ele fica atrás do texto, mas como o pai é transparente, ele aparece! */
   pointer-events: none;
 }
 
