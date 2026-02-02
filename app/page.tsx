@@ -2,8 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 import { ExpandableCards } from "./components/ExpandableCards";
+import { translations, Language } from "./translations";
 
 export default function Home() {
+  const [lang, setLang] = useState<Language>("pt");
+
+  const t = translations[lang];
+
   const heroImages = [
     "/merofotos/agua-cristalina.jpg",
     "/merofotos/praia-paradisiaca.jpg",
@@ -22,216 +27,228 @@ export default function Home() {
   const cards = [
     {
       id: 1,
+      imageSrc: "/merofotos/barco-mero-1.jpg",
       content: (
         <div>
           <img
             src="/merofotos/barco-mero-1.jpg"
-            alt="Barco Mero navegando"
+            alt={t.gallery_1_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Barco Mero em navegação
+            {t.gallery_1_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Navegação tranquila pela costa de Angra dos Reis.
+            {t.gallery_1_desc}
           </p>
         </div>
       ),
     },
     {
       id: 2,
+      imageSrc: "/merofotos/merofora2.jpg",
       content: (
         <div>
           <img
             src="/merofotos/merofora2.jpg"
-            alt="Barco Mero ancorado no píer"
+            alt={t.gallery_2_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Embarque no cais de Angra dos Reis
+            {t.gallery_2_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Ponto de partida do passeio panorâmico.
+            {t.gallery_2_desc}
           </p>
         </div>
       ),
     },
     {
       id: 3,
+      imageSrc: "/merofotos/merofora21.png",
       content: (
         <div>
           <img
             src="/merofotos/merofora21.png"
-            alt="Grupo de pessoas a bordo"
+            alt={t.gallery_3_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Atracando curtindo o passeio
+            {t.gallery_3_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Momentos descontraídos durante as paradas.
+            {t.gallery_3_desc}
           </p>
         </div>
       ),
     },
     {
       id: 4,
+      imageSrc: "/merofotos/familia1.jpg",
       content: (
         <div>
           <img
             src="/merofotos/familia1.jpg"
-            alt="Grupo de pessoas a bordo"
+            alt={t.gallery_4_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Grupos e famílias a bordo
+            {t.gallery_4_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Passeio ideal para famílias e grupos de amigos.
+            {t.gallery_4_desc}
           </p>
         </div>
       ),
     },
     {
       id: 5,
+      imageSrc: "/merofotos/ancorado.jpg",
       content: (
         <div>
           <img
             src="/merofotos/ancorado.jpg"
-            alt="Barco Mero ancorado no píer de Angra dos Reis"
+            alt={t.gallery_5_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Parada para almoço
+            {t.gallery_5_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Intervalo em pontos parceiros na região.
+            {t.gallery_5_desc}
           </p>
         </div>
       ),
     },
     {
       id: 6,
+      imageSrc: "/merofotos/agua-cristalina.jpg",
       content: (
         <div>
           <img
             src="/merofotos/agua-cristalina.jpg"
-            alt="Água cristalina com peixes"
+            alt={t.gallery_6_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Água cristalina
+            {t.gallery_6_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Pontos perfeitos para banho e snorkel.
+            {t.gallery_6_desc}
           </p>
         </div>
       ),
     },
     {
       id: 7,
+      imageSrc: "/merofotos/angra15.jpg",
       content: (
         <div>
           <img
             src="/merofotos/angra15.jpg"
-            alt="Vista aérea de enseada em Angra dos Reis"
+            alt={t.gallery_7_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Enseadas e ilhas do roteiro
+            {t.gallery_7_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Paisagens típicas da Costa Verde.
+            {t.gallery_7_desc}
           </p>
         </div>
       ),
     },
     {
       id: 8,
+      imageSrc: "/merofotos/merovistadrone.png",
       content: (
         <div>
           <img
             src="/merofotos/merovistadrone.png"
-            alt="Praia vista a partir do barco"
+            alt={t.gallery_8_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Chegada às praias pelo Barco Mero
+            {t.gallery_8_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Acesso às praias por mar, com vista privilegiada.
+            {t.gallery_8_desc}
           </p>
         </div>
       ),
     },
     {
       id: 9,
+      imageSrc: "/merofotos/angra14.jpg",
       content: (
         <div>
           <img
             src="/merofotos/angra14.jpg"
-            alt="Praia com quiosques e barcos ancorados"
+            alt={t.gallery_9_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Paisagens da região
+            {t.gallery_9_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Cenários clássicos de Angra dos Reis.
+            {t.gallery_9_desc}
           </p>
         </div>
       ),
     },
     {
       id: 10,
+      imageSrc: "/merofotos/mero12.jpeg",
       content: (
         <div>
           <img
             src="/merofotos/mero12.jpeg"
-            alt="Barco Mero em águas verdes de Angra dos Reis"
+            alt={t.gallery_10_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Barco Mero em águas verdes
+            {t.gallery_10_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Navegação em mar calmo e transparente.
+            {t.gallery_10_desc}
           </p>
         </div>
       ),
     },
     {
       id: 11,
+      imageSrc: "/merofotos/foraedit.png",
       content: (
         <div>
           <img
             src="/merofotos/foraedit.png"
-            alt="Barco Mero com peixes ao fundo"
+            alt={t.gallery_11_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Visual panorâmico
+            {t.gallery_11_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Registro do barco com o mar cristalino ao redor.
+            {t.gallery_11_desc}
           </p>
         </div>
       ),
     },
     {
       id: 12,
+      imageSrc: "/merofotos/equipe.jpg",
       content: (
         <div>
           <img
             src="/merofotos/equipe.jpg"
-            alt="Equipe a bordo do Barco Mero"
+            alt={t.gallery_12_title}
             style={{ width: "100%", borderRadius: 12, marginBottom: 8 }}
           />
           <h3 style={{ fontSize: "0.95rem", marginBottom: 4 }}>
-            Profissionais do barco
+            {t.gallery_12_title}
           </h3>
           <p style={{ fontSize: "0.8rem", opacity: 0.85 }}>
-            Tripulação preparada para receber o seu grupo.
+            {t.gallery_12_desc}
           </p>
         </div>
       ),
@@ -258,17 +275,7 @@ export default function Home() {
           background: "linear-gradient(to right, #0f172a, #0b1120)",
         }}
       >
-        <div
-          style={{
-            maxWidth: "1120px",
-            margin: "0 auto",
-            padding: "10px 16px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "16px",
-          }}
-        >
+        <div className="max-w-[1120px] mx-auto px-4 py-2.5 flex flex-col md:flex-row items-center justify-between gap-4">
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <img
               src="/merofotos/logoMeroveto.png"
@@ -282,41 +289,29 @@ export default function Home() {
           </div>
 
           <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 18,
-            }}
+            className="flex flex-wrap items-center justify-center gap-4 md:gap-5"
           >
-            <nav
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 16,
-                fontSize: "0.9rem",
-                opacity: 0.9,
-              }}
-            >
+            <nav className="flex flex-wrap items-center justify-center gap-4 text-[0.9rem] opacity-90">
               <a href="#sobre" style={{ textDecoration: "none", color: "white" }}>
-                Sobre
+                {t.nav_about}
               </a>
               <a
                 href="#passeio"
                 style={{ textDecoration: "none", color: "white" }}
               >
-                Passeio
+                {t.nav_tours}
               </a>
               <a
                 href="#galeria"
                 style={{ textDecoration: "none", color: "white" }}
               >
-                Galeria
+                {t.nav_gallery}
               </a>
               <a
                 href="#contato"
                 style={{ textDecoration: "none", color: "white" }}
               >
-                Contato
+                {t.nav_contact}
               </a>
             </nav>
 
@@ -330,28 +325,32 @@ export default function Home() {
             >
               <button
                 type="button"
+                onClick={() => setLang("pt")}
                 style={{
                   padding: "4px 10px",
                   borderRadius: 999,
-                  border: "1px solid rgba(148,163,184,0.8)",
-                  backgroundColor: "white",
-                  color: "#0f172a",
+                  border: lang === "pt" ? "1px solid rgba(148,163,184,0.8)" : "1px solid rgba(148,163,184,0.5)",
+                  backgroundColor: lang === "pt" ? "white" : "transparent",
+                  color: lang === "pt" ? "#0f172a" : "white",
                   fontWeight: 600,
                   cursor: "pointer",
+                  transition: "all 0.2s"
                 }}
               >
                 PT
               </button>
               <button
                 type="button"
+                onClick={() => setLang("en")}
                 style={{
                   padding: "4px 10px",
                   borderRadius: 999,
-                  border: "1px solid rgba(148,163,184,0.5)",
-                  backgroundColor: "transparent",
-                  color: "white",
-                  fontWeight: 500,
+                  border: lang === "en" ? "1px solid rgba(148,163,184,0.8)" : "1px solid rgba(148,163,184,0.5)",
+                  backgroundColor: lang === "en" ? "white" : "transparent",
+                  color: lang === "en" ? "#0f172a" : "white",
+                  fontWeight: 600,
                   cursor: "pointer",
+                  transition: "all 0.2s"
                 }}
               >
                 EN
@@ -370,15 +369,7 @@ export default function Home() {
         }}
       >
         <div
-          style={{
-            maxWidth: "1120px",
-            margin: "0 auto",
-            padding: "40px 16px 56px",
-            display: "grid",
-            gridTemplateColumns: "minmax(0, 1.5fr) minmax(0, 1fr)",
-            gap: "32px",
-            alignItems: "center",
-          }}
+          className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-8 items-center max-w-[1120px] mx-auto px-4 pt-10 pb-14"
         >
           <div>
             <p
@@ -390,18 +381,17 @@ export default function Home() {
                 marginBottom: "10px",
               }}
             >
-              Passeio panorâmico em Angra dos Reis
+              {t.hero_pretitle}
             </p>
 
             <h1
               style={{
-                fontSize: "2.6rem",
+                fontSize: "2.6rem", // Poderíamos reduzir em mobile, mas vamos focar no layout primeiro
                 lineHeight: 1.1,
                 marginBottom: "14px",
               }}
             >
-              Explore as ilhas de Angra
-              <br /> com conforto e segurança.
+              {t.hero_title}
             </h1>
 
             <p
@@ -412,9 +402,7 @@ export default function Home() {
                 marginBottom: "14px",
               }}
             >
-              Angra dos Reis é um paraíso da Costa Verde do Rio de Janeiro, com
-              mais de 360 ilhas e centenas de praias de águas verdes e
-              cristalinas, muitas acessíveis apenas de barco.
+              {t.hero_desc1}
             </p>
             <p
               style={{
@@ -424,10 +412,7 @@ export default function Home() {
                 marginBottom: "22px",
               }}
             >
-              No passeio panorâmico da Escuna Mero você navega por enseadas
-              protegidas, faz paradas estratégicas para banho de mar e mergulho
-              com peixes e aproveita paisagens que lembram as melhores regiões
-              do Caribe brasileiro, sempre com uma equipe preparada a bordo.
+              {t.hero_desc2}
             </p>
 
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
@@ -447,7 +432,7 @@ export default function Home() {
                   textDecoration: "none",
                 }}
               >
-                Conheça o passeio panorâmico
+                {t.hero_cta_primary}
               </a>
 
               <a
@@ -463,7 +448,7 @@ export default function Home() {
                   textDecoration: "none",
                 }}
               >
-                Falar com a equipe MERO
+                {t.hero_cta_secondary}
               </a>
             </div>
           </div>
@@ -507,13 +492,7 @@ export default function Home() {
           }}
         >
           <div className="card-boia">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "minmax(0, 1.4fr) minmax(0, 1fr)",
-                gap: "24px",
-              }}
-            >
+            <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-6">
               <div>
                 <h2
                   style={{
@@ -521,7 +500,7 @@ export default function Home() {
                     marginBottom: "6px",
                   }}
                 >
-                  Passeio panorâmico em Angra dos Reis
+                  {t.tour_title}
                 </h2>
                 <p
                   style={{
@@ -531,9 +510,7 @@ export default function Home() {
                     marginBottom: "12px",
                   }}
                 >
-                  Saída do Rio de Janeiro com transporte rodoviário, embarcação
-                  autorizada, paradas para banho em ilhas de água cristalina e
-                  tempo livre para aproveitar as paisagens de Angra dos Reis.
+                  {t.tour_desc}
                 </p>
 
                 <div
@@ -546,20 +523,20 @@ export default function Home() {
                   }}
                 >
                   <div>
-                    <div style={{ opacity: 0.7 }}>Duração</div>
-                    <div>1 dia inteiro</div>
+                    <div style={{ opacity: 0.7 }}>{t.tour_duration_label}</div>
+                    <div>{t.tour_duration_value}</div>
                   </div>
                   <div>
-                    <div style={{ opacity: 0.7 }}>Saída</div>
-                    <div>Rio de Janeiro – madrugada</div>
+                    <div style={{ opacity: 0.7 }}>{t.tour_departure_label}</div>
+                    <div>{t.tour_departure_value}</div>
                   </div>
                   <div>
-                    <div style={{ opacity: 0.7 }}>Tipo de passeio</div>
-                    <div>Panorâmico, com paradas para banho</div>
+                    <div style={{ opacity: 0.7 }}>{t.tour_type_label}</div>
+                    <div>{t.tour_type_value}</div>
                   </div>
                   <div>
-                    <div style={{ opacity: 0.7 }}>Locais visitados</div>
-                    <div>Ilhas e enseadas da baía de Angra</div>
+                    <div style={{ opacity: 0.7 }}>{t.tour_places_label}</div>
+                    <div>{t.tour_places_value}</div>
                   </div>
                 </div>
               </div>
@@ -573,19 +550,20 @@ export default function Home() {
                 }}
               >
                 <div>
-                  <h3 style={{ marginBottom: "8px" }}>Incluído no passeio</h3>
+                  <h3 style={{ marginBottom: "8px" }}>{t.included_title}</h3>
                   <ul style={{ paddingLeft: "1.1rem", margin: 0 }}>
-                    <li>Embarcação com tripulação experiente.</li>
-                    <li>Combustível para todo o trajeto.</li>
-                    <li>Equipamentos de segurança a bordo.</li>
+                    {t.included_list.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
                   </ul>
 
                   <h3 style={{ marginTop: "14px", marginBottom: "8px" }}>
-                    Não incluído
+                    {t.not_included_title}
                   </h3>
                   <ul style={{ paddingLeft: "1.1rem", margin: 0 }}>
-                    <li>Alimentação.</li>
-                    <li>Bebidas alcoólicas.</li>
+                    {t.not_included_list.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
                   </ul>
                 </div>
 
@@ -598,11 +576,9 @@ export default function Home() {
                   }}
                 >
                   <div>
-                    <h3 style={{ marginBottom: "8px" }}>Informações e reservas</h3>
+                    <h3 style={{ marginBottom: "8px" }}>{t.info_title}</h3>
                     <p style={{ marginBottom: "8px", fontSize: "0.86rem" }}>
-                      Valores, datas e condições podem variar conforme a época do
-                      ano e a disponibilidade da embarcação. Fale com a equipe
-                      MERO para receber uma proposta para o seu grupo.
+                      {t.info_text}
                     </p>
                   </div>
 
@@ -626,7 +602,7 @@ export default function Home() {
                         cursor: "pointer",
                       }}
                     >
-                      Falar no WhatsApp
+                      {t.whatsapp_button}
                     </a>
                   </div>
                 </div>
@@ -648,107 +624,17 @@ export default function Home() {
                 }}
               >
                 <p style={{ maxWidth: "520px" }}>
-                  Para grupos grandes ou eventos especiais, consulte condições
-                  diferenciadas e opções de personalização do roteiro.
+                  {t.groups_info}
                 </p>
 
-                <a
-                  href="#contato"
-                  style={{
-                    padding: "9px 18px",
-                    borderRadius: "999px",
-                    border: "none",
-                    fontSize: "0.85rem",
-                    fontWeight: 600,
-                    background:
-                      "linear-gradient(135deg, rgb(56,189,248), rgb(129,140,248))",
-                    color: "#0f172a",
-                    whiteSpace: "nowrap",
-                    cursor: "pointer",
-                    textDecoration: "none",
-                  }}
-                >
-                  Tenho interesse nesse passeio
-                </a>
+
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* DETALHES */}
-      <section
-        id="detalhes-passeio"
-        style={{
-          background: "#020617",
-          borderTop: "1px solid rgba(15,23,42,0.9)",
-          padding: "0 16px 40px",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1120px",
-            margin: "0 auto",
-          }}
-        >
-          <div className="card-boia">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-                gap: "24px",
-                fontSize: "0.9rem",
-              }}
-            >
-              <div>
-                <h3 style={{ marginBottom: "8px" }}>Incluído no passeio</h3>
-                <ul style={{ paddingLeft: "1.1rem", margin: 0 }}>
-                  <li>Embarcação com tripulação experiente.</li>
-                  <li>Combustível para todo o trajeto.</li>
-                  <li>Equipamentos de segurança a bordo.</li>
-                </ul>
-              </div>
 
-              <div>
-                <h3 style={{ marginBottom: "8px" }}>Não incluído</h3>
-                <ul style={{ paddingLeft: "1.1rem", margin: 0 }}>
-                  <li>Alimentação.</li>
-                  <li>Bebidas alcoólicas.</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 style={{ marginBottom: "8px" }}>Informações e reservas</h3>
-                <p style={{ marginBottom: "12px" }}>
-                  Valores sob consulta. Fale com a equipe MERO para receber uma
-                  proposta para o seu grupo.
-                </p>
-                <a
-                  href="https://wa.me/552493256372?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Passeio%20Panor%C3%A2mico%20pela%20Costa."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "inline-block",
-                    padding: "9px 18px",
-                    borderRadius: "999px",
-                    border: "none",
-                    fontSize: "0.85rem",
-                    fontWeight: 600,
-                    background:
-                      "linear-gradient(135deg, rgb(56,189,248), rgb(129,140,248))",
-                    color: "#0f172a",
-                    textDecoration: "none",
-                    whiteSpace: "nowrap",
-                    cursor: "pointer",
-                  }}
-                >
-                  Falar no WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* GALERIA */}
       <section
@@ -757,7 +643,7 @@ export default function Home() {
       >
         <div style={{ maxWidth: 1120, margin: "0 auto" }}>
           <h2 style={{ fontSize: "1.5rem", marginBottom: 8 }}>
-            Galeria de Momentos MERO
+            {t.gallery_title}
           </h2>
           <p
             style={{
@@ -767,7 +653,7 @@ export default function Home() {
               maxWidth: 520,
             }}
           >
-            Veja alguns registros dos passeios panorâmicos em Angra dos Reis.
+            {t.gallery_subtitle}
           </p>
 
           <ExpandableCards cards={cards} />
@@ -815,56 +701,50 @@ export default function Home() {
                     lineHeight: 1.6,
                   }}
                 >
-                  A Agência de Turismo MERO oferece passeios panorâmicos pela
-                  costa de Angra dos Reis, com foco em segurança, conforto e uma
-                  experiência inesquecível para grupos.
+                  A Agência de Turismo MERO é especializada em passeios náuticos e
+                  experiências inesquecíveis no mar, com foco no Passeio
+                  Panorâmico pela Costa em Angra dos Reis.
                 </p>
                 <p
                   style={{
                     fontSize: "0.95rem",
                     opacity: 0.9,
+                    marginBottom: 14,
                     lineHeight: 1.6,
                   }}
                 >
-                  Nossa equipe atua com embarcações autorizadas e tripulação
-                  experiente, garantindo que cada saída aconteça dentro das
-                  normas e com todo o suporte necessário a bordo.
+                  Nosso objetivo é oferecer conforto, segurança e atendimento
+                  personalizado, para que cada grupo aproveite o dia no mar com
+                  tranquilidade, boas fotos e lembranças marcantes.
                 </p>
               </div>
 
-              <div
-                style={{
-                  display: "grid",
-                  gap: 12,
-                  fontSize: "0.9rem",
-                  opacity: 0.95,
-                }}
-              >
+              <div style={{ display: "grid", gap: 16 }}>
                 <div>
-                  <h3 style={{ fontSize: "1rem", marginBottom: 4 }}>
+                  <h4 style={{ fontWeight: 600, color: "#38bdf8" }}>
                     Segurança em primeiro lugar
-                  </h3>
-                  <p>
-                    Embarcações equipadas com coletes, itens de segurança e
-                    documentação em dia para navegação.
+                  </h4>
+                  <p style={{ fontSize: "0.85rem", opacity: 0.8 }}>
+                    Embarcação com equipamentos de segurança e tripulação preparada
+                    para conduzir o passeio com responsabilidade.
                   </p>
                 </div>
                 <div>
-                  <h3 style={{ fontSize: "1rem", marginBottom: 4 }}>
+                  <h4 style={{ fontWeight: 600, color: "#38bdf8" }}>
                     Tripulação experiente
-                  </h3>
-                  <p>
-                    Profissionais que conhecem bem a região e auxiliam o grupo
-                    durante todo o passeio.
+                  </h4>
+                  <p style={{ fontSize: "0.85rem", opacity: 0.8 }}>
+                    Profissionais que conhecem bem a região, as melhores paradas e
+                    os pontos mais indicados para fotos e banho.
                   </p>
                 </div>
                 <div>
-                  <h3 style={{ fontSize: "1rem", marginBottom: 4 }}>
+                  <h4 style={{ fontWeight: 600, color: "#38bdf8" }}>
                     Experiência personalizada
-                  </h3>
-                  <p>
-                    Roteiros ajustados conforme as condições de mar e o perfil
-                    do grupo, sempre priorizando a segurança.
+                  </h4>
+                  <p style={{ fontSize: "0.85rem", opacity: 0.8 }}>
+                    Possibilidade de ajustar detalhes do passeio conforme a
+                    necessidade do grupo, de acordo com a disponibilidade do dia.
                   </p>
                 </div>
               </div>
@@ -879,118 +759,117 @@ export default function Home() {
         style={{
           background: "#020617",
           borderTop: "1px solid rgba(15,23,42,0.9)",
+          padding: "40px 16px 56px",
         }}
       >
-        <div
-          style={{
-            maxWidth: 1120,
-            margin: "0 auto",
-            padding: "40px 16px 40px",
-          }}
-        >
-          <div className="card-boia">
-            <div
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <div
+            style={{
+              padding: "32px",
+              borderRadius: 24,
+              border: "1px solid rgba(148,163,184,0.15)",
+              background: "linear-gradient(to bottom right, #0f172a, #020617)",
+              textAlign: "center",
+            }}
+          >
+            <h2 style={{ fontSize: "1.8rem", marginBottom: 12 }}>
+              {t.nav_contact}
+            </h2>
+            <p
               style={{
-                display: "grid",
-                gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1fr)",
-                gap: 24,
-                fontSize: "0.9rem",
-                opacity: 0.95,
+                fontSize: "1rem",
+                opacity: 0.9,
+                maxWidth: 600,
+                margin: "0 auto 24px",
               }}
             >
-              <div>
-                <h2
-                  style={{
-                    fontSize: "1.4rem",
-                    marginBottom: 10,
-                  }}
-                >
-                  Entre em contato com a MERO
-                </h2>
-                <p
-                  style={{
-                    fontSize: "0.95rem",
-                    opacity: 0.9,
-                    marginBottom: 18,
-                    maxWidth: 640,
-                  }}
-                >
-                  Fale com a nossa equipe para tirar dúvidas, verificar datas
-                  disponíveis e solicitar uma proposta para o seu grupo.
-                </p>
+              Fale com a equipe da Agência de Turismo MERO para tirar dúvidas,
+              consultar datas disponíveis e receber uma proposta para o seu grupo.
+            </p>
 
-                <h3 style={{ fontSize: "1rem", marginBottom: 6 }}>
-                  Canais de atendimento
-                </h3>
-                <p style={{ marginBottom: 6 }}>
-                  Instagram:&nbsp;
-                  <a
-                    href="https://www.instagram.com/mero_turismo/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "#38bdf8", textDecoration: "none" }}
-                  >
-                    @mero_turismo
-                  </a>
-                </p>
-                <p style={{ marginBottom: 6 }}>
-                  Horário de atendimento: 09h às 18h (horário de Brasília), em
-                  dias úteis.
-                </p>
-              </div>
+            <a
+              href="https://wa.me/552493256372?text=Ol%C3%A1,%20vim%20pelo%20site%20da%20Mero!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="blink-btn"
+              style={{
+                display: "inline-block",
+                padding: "14px 32px",
+                borderRadius: "999px",
+                fontSize: "1rem",
+                fontWeight: 600,
+                background: "#22c55e",
+                color: "white",
+                textDecoration: "none",
+                boxShadow: "0 0 16px rgba(34,197,94,0.4)",
+              }}
+            >
+              {t.whatsapp_button}
+            </a>
 
-              <div>
-                <h3 style={{ fontSize: "1rem", marginBottom: 6 }}>
-                  Reserve seu passeio
-                </h3>
-                <p style={{ marginBottom: 10 }}>
-                  Envie uma mensagem no WhatsApp informando o tamanho do grupo e
-                  a data desejada para receber um retorno da equipe MERO.
-                </p>
-                <a
-                  href="https://wa.me/552493256372?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Passeio%20Panor%C3%A2mico%20pela%20Costa."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "inline-block",
-                    padding: "9px 18px",
-                    borderRadius: 999,
-                    fontSize: "0.85rem",
-                    fontWeight: 600,
-                    background:
-                      "linear-gradient(135deg, rgb(56,189,248), rgb(129,140,248))",
-                    color: "#0f172a",
-                    textDecoration: "none",
-                    whiteSpace: "nowrap",
-                  }}
+            <div
+              style={{
+                marginTop: 32,
+                display: "flex",
+                justifyContent: "center",
+                gap: 32,
+                flexWrap: "wrap",
+                opacity: 0.8,
+                fontSize: "0.9rem",
+              }}
+            >
+              <a
+                href="https://github.com/vlacerda93"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-white transition-colors"
+                title="Desenvolvido por Vinicius Lacerda"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
-                  Falar com a equipe MERO
-                </a>
-              </div>
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 3.5 5 3.5c-.28 1.15-.28 2.35 0 3.5A5.403 5.403 0 0 0 4 10.5c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+                <span>vlacerda93</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/mero_turismo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-[#E1306C] transition-colors"
+                title="Siga a MERO no Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+                <span>@mero_turismo</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
-
-      <footer
-        style={{
-          background: "#020617",
-          borderTop: "1px solid rgba(15,23,42,0.9)",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: 1120,
-            margin: "0 auto",
-            padding: "16px",
-            fontSize: "0.8rem",
-            opacity: 0.7,
-            textAlign: "center",
-          }}
-        >
-          © 2026 Agência de Turismo MERO. Todos os direitos reservados.
-        </div>
-      </footer>
     </main>
   );
 }
